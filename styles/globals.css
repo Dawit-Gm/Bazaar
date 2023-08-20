@@ -3,46 +3,334 @@
 @tailwind utilities;
 
 html,
+
+header {
+  background-color:#B5E582;
+  position: relative;
+  flex-wrap: wrap;
+  }
+
+.btn {
+  background-color: #66BF4C ;
+  color: #FFFFFF;
+}
+
+.btn:hover {
+  background-color: #008000;
+}
+
+.btn:active {
+  background-color: #3F8C26; /* Darker amber */ 
+}
+
+.flex {
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+}
+
+
 body {
+  background-color:#F0F7EE;
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-a {
-  @apply text-blue-600 hover:text-blue-800;
+
+input {
+  width: 70%;
+  margin-left: auto;
+  height: 10;
+}
+
+@media only screen and (max-width: 600px) {
+   input {
+    width: 300px;
+  }
+}  
+
+@media only screen and (max-width: 350px) {
+  input {
+   width: 200px;
+ }
+}
+
+input, 
+select, 
+textarea {
+  padding: 0.5rem;  
+  border: 1px solid #dbe2ef;
+  border-radius: 0.25rem;
+  outline: none;   
+}
+
+input:focus,
+select:focus,  
+textarea:focus {
+  border-color: #2196f3;
+}
+
+.carousel {
+  position: absolute; /* Changed from relative to absolute */
+  top: -16px;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  height: 325px;
+  width: 100vw;
+} 
+
+@media only screen and (max-width: 600px) {
+.carousel .control-arrow {
+  height: 42%; /* Adjust the font size as needed */
+}
+}
+
+@media only screen and (min-width: 200px) and (max-width: 1600px) {
+    .carousel .control-dots {
+    top: 1%; /* Adjust the position as needed */
+  }
+  }
+
+.carousel .control-dots {
+  height: 65%; /* Adjust the position as needed */
+}
+
+.container {
+  width: 100vw;
+  margin-bottom: -8%; 
+}
+
+
+
+@media only screen and (min-width: 101px) and (max-width: 180px) {
+  
+   
+ .carousel {
+    top: -9px;
+  }
+
+  .grid {
+     left: 2%;
+     right: 2%;
+     width: 96%;
+     top: -19rem;
+     position: relative;
+ }
+ }
+
+ @media only screen and (min-width: 181px) and (max-width: 196px) {
+  
+  .carousel {
+    top: -9px;
+  }
+
+  .grid {
+     left: 2%;
+     right: 2%;
+     width: 96%;
+     top: -18rem;
+     position: relative;
+ }
+ }
+
+ @media only screen and (min-width: 197px) and (max-width: 252px) {
+  .carousel {
+    top: -9px;
+  }
+
+  .grid {
+     left: 2%;
+     right: 2%;
+     width: 96%;
+     top: -17.5rem;
+     position: relative;
+ }
+ }
+
+ @media only screen and (min-width: 253px) and (max-width: 350px) {
+  .carousel {
+    top: -9px;
+  }
+
+  .grid {
+     left: 2%;
+     right: 2%;
+     width: 96%;
+     top: -16.5rem;
+     position: relative;
+ }
+ }
+
+ @media only screen and (min-width: 351px) and (max-width: 500px) {
+  .carousel {
+    top: -9px;
+  }
+
+  .grid {
+     left: 2%;
+     right: 2%;
+     width: 96%;
+     top: -14.5rem;
+     position: relative;
+ }
+ }
+
+@media only screen and (min-width: 501px) and (max-width: 600px) {
+  .carousel {
+    top: -9px;
+  }
+  
+  .grid {
+     left: 2%;
+     right: 2%;
+     width: 96%;
+     top: -13.5rem;
+     position: relative;
+   }
+ }
+ 
+ @media only screen and (min-width: 601px) and (max-width: 700px) {
+  .carousel {
+    top: -9px;
+  }
+
+  .grid {
+     left: 2%;
+     right: 2%;
+     width: 96%;
+     top: -12.5rem;
+     position: relative;
+ }
+ }
+ @media only screen and (min-width: 701px) and (max-width: 800px) {
+  .grid {
+     left: 2%;
+     right: 2%;
+     width: 96%;
+     top: -11.5rem;
+     position: relative;
+ }
+ }
+ @media only screen and (min-width: 801px) and (max-width: 1000px) {
+  .grid {
+     left: 2%;
+     right: 2%;
+     width: 96%;
+     top: -11.5rem;
+     position: relative;
+ }
+ }
+ @media only screen and (min-width: 1001px) and (max-width: 1100px) {
+  .grid {
+     left: 2%;
+     right: 2%;
+     width: 96%;
+     top: -8.5rem;
+     position: relative;
+ }
+ }
+
+
+@media only screen and (min-width: 1101px) and (max-width: 1200px) {
+  .grid {
+     left: 2%;
+     right: 2%;
+     width: 96%;
+     top: -8.5rem;
+     position: relative;
+ }
+}
+
+
+@media only screen and (min-width: 1201px) and (max-width: 1300px) {
+  .grid {
+     left: 2%;
+     right: 2%;
+     width: 96%;
+     top: -8.5rem;
+     position: relative;
+ }
+}
+ 
+@media only screen and (min-width: 1301px) and (max-width: 1600px) {
+  .grid {
+     left: 2%;
+     right: 2%;
+     width: 96%;
+     top: -6.5rem;
+     position: relative;
+ }
+}
+
+
+ .card {
+  background: white; 
+  border-radius: 0%;  
+  border: 1px solid #e5e7eb;      
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  padding: 1.5rem;  
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;  
+}
+
+
+a {  
+  color: #FFFFFF  ;    
+  text-decoration: none;
+}
+
+a:hover {  
+  color: #0053B3;
 }
 
 * {
   box-sizing: border-box;
 }
 
-.card {
-  @apply mb-5  block   rounded-lg border border-gray-200  shadow-md;
-}
-
 .primary-button {
-  @apply rounded bg-amber-300 py-2 px-4 shadow outline-none hover:bg-amber-400  active:bg-amber-500;
+  background-color: #66BF4C ;
+  color: #FFFFFF;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.25rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  text-align: center;
+  transition: background-color 0.15s ease;
 }
+
+.primary-button:hover {
+  background-color: #008000; /* Lighter amber */
+}
+
+.primary-button:active {
+  background-color: #3F8C26; /* Darker amber */ 
+}
+
 .default-button {
-  @apply rounded bg-gray-100 py-2  px-4 text-black shadow outline-none hover:bg-gray-200  active:bg-gray-300;
+  background-color: #f9fafb;
+  color:#212121 ;  
+  padding: 0.5rem 1rem; 
+  border-radius: 0.25rem;  
+  border: 1px solid #dbe2ef;
+  box-shadow: 0 2px 6px 0 rgb(0 0 0 / 8%);    
+  outline: none;
+  cursor: pointer;    
+
 }
 
-input,
-select,
-textarea {
-  @apply rounded border p-2  outline-none ring-indigo-300  focus:ring;
+.default-button:hover {
+  background-color: #f1f5f9;
 }
 
-.dropdown-link {
-  @apply flex p-2 hover:bg-gray-200;
-}
-
-.alert-error {
-  @apply my-3 rounded-lg bg-red-100 p-3 text-red-700;
-}
-
-.alert-success {
-  @apply my-3 rounded-lg bg-green-100 p-3 text-green-700;
+.footer{
+  display: flex; 
+  height: 3rem;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0 0 2rem rgba(0,0,0,0.1);
+  background: #B5E582;
 }

@@ -8,6 +8,7 @@ import db from '../utils/db';
 import { Store } from '../utils/Store';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import GridLayout from 'react-grid-layout';
 import Link from 'next/link';
 
 export default function Home({ products, featuredProducts }) {
@@ -38,8 +39,9 @@ export default function Home({ products, featuredProducts }) {
           </div>
         ))}
       </Carousel>
-      <h2 className="h2 my-4">Latest Products</h2>
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4">
+{/*<h2 className="h2 my-4">Latest Products</h2>*/}
+      
+      <GridLayout className="grid grid-cols-2 gap-auto  sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4">
         {products.map((product) => (
           <ProductItem
             product={product}
@@ -47,7 +49,7 @@ export default function Home({ products, featuredProducts }) {
             addToCartHandler={addToCartHandler}
           ></ProductItem>
         ))}
-      </div>
+      </GridLayout>
     </Layout>
   );
 }
