@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Build Nextjs ECommerce Website Like Amazon
 
 - Tech: Nextjs 13, Next Auth 4
@@ -217,3 +218,7 @@ https://basir.thinkific.com/courses/build-ecommerce-website-like-amazon-by-next-
     1. create filters
     2. list products
     3. show filters
+=======
+# Bazaar
+E-commerce
+>>>>>>> origin/main
