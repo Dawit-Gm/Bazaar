@@ -102,7 +102,7 @@ import { Bars3Icon } from '@heroicons/react/24/solid';
        <nav className="flex flex-col sm:flex-row h-20 items-center px-4 justify-start shadow-md">
        <div className="flex sm:w-1/5 items-center justify-start sm:justify-start sm:items-start">
          <Link href="/" className="logo">
-         <img
+         <Image
           src="https://res.cloudinary.com/dxxzqmxu5/image/upload/v1691256496/Bazaar.png"
           alt="Logo"
           className="w-100 sm:w-auto ml-0 "
