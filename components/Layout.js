@@ -1,7 +1,7 @@
 import { signOut, useSession } from 'next-auth/react';
 import Head from 'next/head';
 import Link from 'next/link';
-import Image from 'next/image'
+import Image from 'next/image';
 import Cookies from 'js-cookie';
 import React, { useContext, useEffect, useState, useRef} from 'react';
 import { ToastContainer } from 'react-toastify';
@@ -21,7 +21,6 @@ import { Bars3Icon } from '@heroicons/react/24/solid';
 
 
  export default function Layout({ title, children, homepage }) {
-  //const [showNavLinks, setShowNavLinks] = useState(false);
   const { status, data: session } = useSession();
   const { state, dispatch } = useContext(Store);
   const { cart } = state;
@@ -36,9 +35,9 @@ import { Bars3Icon } from '@heroicons/react/24/solid';
     signOut({ callbackUrl: '/login' });
   };
 
-  const [query, setQuery] = useState('');
-
+  const [query] = useState('');
   const router = useRouter();
+
   const submitHandler = (e) => {
     e.preventDefault();
     router.push(`/search?query=${query}`);
