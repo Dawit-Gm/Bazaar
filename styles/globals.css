@@ -12,7 +12,7 @@ header {
 
 .btn {
   background-color: #66BF4C ;
-  color: #FFFFFF;
+  color: white;
 }
 
 .btn:hover {
@@ -30,30 +30,11 @@ header {
 
 
 body {
-  background-color:#F0F7EE;
+  background-color: white;
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-
-input {
-  width: 70%;
-  margin-left: auto;
-  height: 10;
-}
-
-@media only screen and (max-width: 600px) {
-   input {
-    width: 300px;
-  }
-}  
-
-@media only screen and (max-width: 350px) {
-  input {
-   width: 200px;
- }
 }
 
 input, 
@@ -68,245 +49,139 @@ textarea {
 input:focus,
 select:focus,  
 textarea:focus {
-  border-color: #2196f3;
+    border-color : #66BF4C ;
 }
 
-.carousel {
-  position: absolute; /* Changed from relative to absolute */
-  top: -16px;
-  left: 0;
-  right: 0;
-  overflow: hidden;
-  height: 325px;
-  width: 100vw;
-} 
-
-@media only screen and (max-width: 600px) {
-.carousel .control-arrow {
-  height: 42%; /* Adjust the font size as needed */
-}
-}
-
-@media only screen and (min-width: 200px) and (max-width: 1600px) {
-    .carousel .control-dots {
-    top: 1%; /* Adjust the position as needed */
-  }
-  }
-
-.carousel .control-dots {
-  height: 65%; /* Adjust the position as needed */
-}
-
-.container {
-  width: 100vw;
-  margin-bottom: -8%; 
-}
-
-
-
-@media only screen and (min-width: 101px) and (max-width: 180px) {
-  
-   
  .carousel {
-    top: -9px;
-  }
+      top: -16px;
+      left: 2%;
+      right: 2%;
+     }
+   .grid {
+      top: -14px;
+      left: 2%;
+      right: 2%;
+      gap: 0.5rem;
+      position: relative;
+       } 
+   .card{
+     height: 210px;
+     padding-bottom: -14%;
+   } 
+   
+   .cardname {
+     font-size: small;
+    }
+   .price {
+     font-size: small;
+    }
+    .contact {
+     font-size: small;
+    }
+ 
+    .react-grid-layout {
+       height: auto !important;
+     }
 
-  .grid {
-     left: 2%;
-     right: 2%;
-     width: 96%;
-     top: -19rem;
-     position: relative;
- }
- }
-
- @media only screen and (min-width: 181px) and (max-width: 196px) {
+ @media (max-width: 767px) {
   
-  .carousel {
-    top: -9px;
-  }
-
-  .grid {
-     left: 2%;
-     right: 2%;
-     width: 96%;
-     top: -18rem;
-     position: relative;
- }
- }
-
- @media only screen and (min-width: 197px) and (max-width: 252px) {
-  .carousel {
-    top: -9px;
-  }
-
-  .grid {
-     left: 2%;
-     right: 2%;
-     width: 96%;
-     top: -17.5rem;
-     position: relative;
- }
- }
-
- @media only screen and (min-width: 253px) and (max-width: 350px) {
-  .carousel {
-    top: -9px;
-  }
-
-  .grid {
-     left: 2%;
-     right: 2%;
-     width: 96%;
-     top: -16.5rem;
-     position: relative;
- }
- }
-
- @media only screen and (min-width: 351px) and (max-width: 500px) {
-  .carousel {
-    top: -9px;
-  }
-
-  .grid {
-     left: 2%;
-     right: 2%;
-     width: 96%;
-     top: -14.5rem;
-     position: relative;
- }
- }
-
-@media only screen and (min-width: 501px) and (max-width: 600px) {
-  .carousel {
-    top: -9px;
-  }
-  
-  .grid {
-     left: 2%;
-     right: 2%;
-     width: 96%;
-     top: -13.5rem;
-     position: relative;
+  input {
+   width: 60vw;
+   height: 38px;
    }
- }
+   .btn{
+    height: 36px;
+    width: 36px;
+   }
  
- @media only screen and (min-width: 601px) and (max-width: 700px) {
-  .carousel {
-    top: -9px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1400px) {
+  input {
+    width: 45vw;
+    height: 45px;
   }
-
-  .grid {
-     left: 2%;
-     right: 2%;
-     width: 96%;
-     top: -12.5rem;
-     position: relative;
- }
- }
- @media only screen and (min-width: 701px) and (max-width: 800px) {
-  .grid {
-     left: 2%;
-     right: 2%;
-     width: 96%;
-     top: -11.5rem;
-     position: relative;
- }
- }
- @media only screen and (min-width: 801px) and (max-width: 1000px) {
-  .grid {
-     left: 2%;
-     right: 2%;
-     width: 96%;
-     top: -11.5rem;
-     position: relative;
- }
- }
- @media only screen and (min-width: 1001px) and (max-width: 1100px) {
-  .grid {
-     left: 2%;
-     right: 2%;
-     width: 96%;
-     top: -8.5rem;
-     position: relative;
- }
- }
-
-
-@media only screen and (min-width: 1101px) and (max-width: 1200px) {
-  .grid {
-     left: 2%;
-     right: 2%;
-     width: 96%;
-     top: -8.5rem;
-     position: relative;
- }
+  .btn{
+    height: 43px;
+    width: 43px;
+   }
+   
 }
+  
 
-
-@media only screen and (min-width: 1201px) and (max-width: 1300px) {
-  .grid {
-     left: 2%;
-     right: 2%;
-     width: 96%;
-     top: -8.5rem;
-     position: relative;
- }
-}
  
-@media only screen and (min-width: 1301px) and (max-width: 1600px) {
-  .grid {
-     left: 2%;
-     right: 2%;
-     width: 96%;
-     top: -6.5rem;
-     position: relative;
- }
+.icon-count-container {
+  position: relative; 
 }
-
-
+.item-count {
+  position: absolute;
+  top: 3px; 
+  right: 7px;
+  color: #FFFFFF;
+  font-size: smaller;
+  background: #ee2f2f;
+  padding: 0px 6px;
+  border-radius: 100%;
+}
  .card {
   background: white; 
   border-radius: 0%;  
   border: 1px solid #e5e7eb;      
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  padding: 1.5rem;  
+  padding: 0rem;  
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;  
 }
 
+.primary-button {
+    padding: 0.5rem 1rem; 
+    border-radius: 0.5rem; 
+    margin: 0.25rem;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+    background-color: #66BF4C ;
+    color: #FFFFFF;
+  }
+  
+  .primary-button:hover {
+    background-color: #008000;
+  }
+  
+  .primary-button:active {
+    background-color: #3F8C26; /* Darker amber */ 
+  }
+
 
 a {  
-  color: #FFFFFF  ;    
+  color: black;    
   text-decoration: none;
 }
 
 a:hover {  
-  color: #0053B3;
+  color: black;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-.primary-button {
-  background-color: #66BF4C ;
-  color: #FFFFFF;
-  padding: 0.75rem 1.5rem;
-  border-radius: 0.25rem;
-  outline: none;
-  border: none;
+ .add-cart{
+  color: #66BF4C;
   cursor: pointer;
-  font-weight: 600;
-  text-align: center;
-  transition: background-color 0.15s ease;
+ }
+.add-cart:hover {
+  color: #008000; /* Lighter amber */
+}
+.add-cart:active {
+  background-color: #3F8C26; /* Darker amber */ 
 }
 
-.primary-button:hover {
-  background-color: #008000; /* Lighter amber */
+.contact {
+  color: #66BF4C;
+  cursor: pointer;
+  }
+
+.contact:hover {
+  color: #008000; /* Lighter amber */
 }
 
-.primary-button:active {
+.contact:active {
   background-color: #3F8C26; /* Darker amber */ 
 }
 
@@ -314,7 +189,7 @@ a:hover {
   background-color: #f9fafb;
   color:#212121 ;  
   padding: 0.5rem 1rem; 
-  border-radius: 0.25rem;  
+  border-radius: 0.4rem;  
   border: 1px solid #dbe2ef;
   box-shadow: 0 2px 6px 0 rgb(0 0 0 / 8%);    
   outline: none;

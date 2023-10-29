@@ -15,14 +15,12 @@ function reducer(state, action) {
       return { ...state, loading: false, error: '' };
     case 'FETCH_FAIL':
       return { ...state, loading: false, error: action.payload };
-
     case 'UPDATE_REQUEST':
       return { ...state, loadingUpdate: true, errorUpdate: '' };
     case 'UPDATE_SUCCESS':
       return { ...state, loadingUpdate: false, errorUpdate: '' };
     case 'UPDATE_FAIL':
       return { ...state, loadingUpdate: false, errorUpdate: action.payload };
-
     case 'UPLOAD_REQUEST':
       return { ...state, loadingUpload: true, errorUpload: '' };
     case 'UPLOAD_SUCCESS':
@@ -140,9 +138,6 @@ export default function AdminProductEditScreen() {
           <ul>
             <li>
               <Link href="/admin/dashboard">Dashboard</Link>
-            </li>
-            <li>
-              <Link href="/admin/orders">Orders</Link>
             </li>
             <li>
               <Link href="/admin/products" className="font-bold">

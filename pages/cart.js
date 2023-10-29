@@ -8,6 +8,10 @@ import { useRouter } from 'next/router';
 import dynamic from 'next/dynamic';
 import axios from 'axios';
 import { toast } from 'react-toastify';
+import '@fortawesome/fontawesome-free/css/all.css';
+import { BsPhoneVibrate } from 'react-icons/bs';
+import { useState } from 'react';
+
 
 function CartScreen() {
   const router = useRouter();
@@ -27,6 +31,8 @@ function CartScreen() {
     dispatch({ type: 'CART_ADD_ITEM', payload: { ...item, quantity } });
     toast.success('Product updated in the cart');
   };
+
+
   return (
     <Layout title="Shopping Cart">
       <h1 className="mb-4 text-xl">Shopping Cart</h1>
@@ -81,7 +87,7 @@ function CartScreen() {
                         ))}
                       </select>
                     </td>
-                    <td className="p-5 text-right">${item.price}</td>
+                    <td className="p-5 text-right">ETB&nbsp;{item.price}</td>
                     <td className="p-5 text-center">
                       <button onClick={() => removeItemHandler(item)}>
                         <XCircleIcon className="h-5 w-5"></XCircleIcon>
@@ -96,18 +102,18 @@ function CartScreen() {
             <ul>
               <li>
                 <div className="pb-3 text-xl">
-                  Subtotal ({cartItems.reduce((a, c) => a + c.quantity, 0)}) : $
+                  Subtotal ({cartItems.reduce((a, c) => a + c.quantity, 0)}) : ETB&nbsp;&nbsp;
                   {cartItems.reduce((a, c) => a + c.quantity * c.price, 0)}
                 </div>
               </li>
-              <li>
-                <button
-                  onClick={() => router.push('login?redirect=/shipping')}
-                  className="primary-button w-full"
-                >
-                  Check Out
-                </button>
-              </li>
+              <div style={{display: 'flex', justifyContent: 'center'}}>
+              <a href="tel:2519111111" className="primary-button">
+                <span style={{display: 'flex', alignItems: 'center',}}>
+                <BsPhoneVibrate size={28} />
+                <span style={{marginLeft: '10px'}}>2519111111</span> 
+                </span>
+              </a>
+              </div>  
             </ul>
           </div>
         </div>

@@ -18,9 +18,17 @@ export default function ProfileScreen() {
   } = useForm();
 
   useEffect(() => {
+    if (session && session.user) {
+      setValue('name', session.user.name);
+      setValue('email', session.user.email);
+    }
+  }, [session, setValue]);
+
+  /*useEffect(() => 
+  {
     setValue('name', session.user.name);
     setValue('email', session.user.email);
-  }, [session.user, setValue]);
+  }, [session.user, setValue]);*/
 
   const submitHandler = async ({ name, email, password }) => {
     try {

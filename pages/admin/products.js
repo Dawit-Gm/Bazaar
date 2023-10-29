@@ -60,7 +60,8 @@ export default function AdminProdcutsScreen() {
       toast.error(getError(err));
     }
   };
-  useEffect(() => {
+
+ useEffect(() => {
     const fetchData = async () => {
       try {
         dispatch({ type: 'FETCH_REQUEST' });
@@ -101,9 +102,6 @@ export default function AdminProdcutsScreen() {
               <Link href="/admin/dashboard">Dashboard</Link>
             </li>
             <li>
-              <Link href="/admin/orders">Orders</Link>
-            </li>
-            <li>
               <Link href="/admin/products" className="font-bold">
                 Products
               </Link>
@@ -113,7 +111,9 @@ export default function AdminProdcutsScreen() {
             </li>
           </ul>
         </div>
-        <div className="overflow-x-auto md:col-span-3">
+
+        
+      <div className="overflow-x-auto md:col-span-3">
           <div className="flex justify-between">
             <h1 className="mb-4 text-xl">Products</h1>
             {loadingDelete && <div>Deleting item...</div>}
@@ -139,7 +139,6 @@ export default function AdminProdcutsScreen() {
                     <th className="p-5 text-left">PRICE</th>
                     <th className="p-5 text-left">CATEGORY</th>
                     <th className="p-5 text-left">COUNT</th>
-                    <th className="p-5 text-left">RATING</th>
                     <th className="p-5 text-left">ACTIONS</th>
                   </tr>
                 </thead>
@@ -151,7 +150,6 @@ export default function AdminProdcutsScreen() {
                       <td className=" p-5 ">${product.price}</td>
                       <td className=" p-5 ">{product.category}</td>
                       <td className=" p-5 ">{product.countInStock}</td>
-                      <td className=" p-5 ">{product.rating}</td>
                       <td className=" p-5 ">
                         <Link
                           href={`/admin/product/${product._id}`}

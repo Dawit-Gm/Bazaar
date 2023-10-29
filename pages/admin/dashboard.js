@@ -66,16 +66,6 @@ function AdminDashboardScreen() {
     fetchData();
   }, []);
 
-  const data = {
-    labels: summary.salesData.map((x) => x._id), // 2022/01 2022/03
-    datasets: [
-      {
-        label: 'Sales',
-        backgroundColor: 'rgba(162, 222, 208, 1)',
-        data: summary.salesData.map((x) => x.totalSales),
-      },
-    ],
-  };
   return (
     <Layout title="Admin Dashboard">
       <div className="grid  md:grid-cols-4 md:gap-5">
@@ -85,10 +75,7 @@ function AdminDashboardScreen() {
               <Link href="/admin/dashboard" className="font-bold">
                 Dashboard
               </Link>
-            </li>
-            <li>
-              <Link href="/admin/orders">Orders</Link>
-            </li>
+            </li> 
             <li>
               <Link href="/admin/products">Products</Link>
             </li>
@@ -107,16 +94,6 @@ function AdminDashboardScreen() {
             <div>
               <div className="grid grid-cols-1 md:grid-cols-4">
                 <div className="card m-5 p-5">
-                  <p className="text-3xl">${summary.ordersPrice} </p>
-                  <p>Sales</p>
-                  <Link href="/admin/orders">View sales</Link>
-                </div>
-                <div className="card m-5 p-5">
-                  <p className="text-3xl">{summary.ordersCount} </p>
-                  <p>Orders</p>
-                  <Link href="/admin/orders">View orders</Link>
-                </div>
-                <div className="card m-5 p-5">
                   <p className="text-3xl">{summary.productsCount} </p>
                   <p>Products</p>
                   <Link href="/admin/products">View products</Link>
@@ -127,13 +104,6 @@ function AdminDashboardScreen() {
                   <Link href="/admin/users">View users</Link>
                 </div>
               </div>
-              <h2 className="text-xl">Sales Report</h2>
-              <Bar
-                options={{
-                  legend: { display: true, position: 'right' },
-                }}
-                data={data}
-              />
             </div>
           )}
         </div>

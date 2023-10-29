@@ -10,7 +10,6 @@ import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import GridLayout from 'react-grid-layout';
 import Link from 'next/link';
-import Image from 'next/image';
 
 export default function Home({ products, featuredProducts }) {
   const { state, dispatch } = useContext(Store);
@@ -30,19 +29,20 @@ export default function Home({ products, featuredProducts }) {
   };
 
   return (
-    <Layout title="Home Page">
+    <Layout>
       <Carousel showThumbs={false} autoPlay>
         {featuredProducts.map((product) => (
           <div key={product._id}>
             <Link href={`/product/${product.slug}`} passHref className="flex">
-              <Image src={product.banner} alt={product.name} />
+              <img src={product.banner} 
+                alt={product.name}
+                />
             </Link>
           </div>
         ))}
       </Carousel>
-{/*<h2 className="h2 my-4">Latest Products</h2>*/}
       
-      <GridLayout className="grid grid-cols-2 gap-auto  sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4">
+      <GridLayout className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
         {products.map((product) => (
           <ProductItem
             product={product}

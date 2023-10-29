@@ -12,7 +12,7 @@ const data = {
       name: 'Jane',
       email: 'user@example.com',
       password: bcrypt.hashSync('123456'),
-      isAdmin: false,
+      isAdmin: true,
     },
   ],
   products: [
@@ -55,6 +55,8 @@ const data = {
       numReviews: 3,
       countInStock: 20,
       description: 'A popular shirt',
+      //isFeatured: true,
+      //banner: 'https://res.cloudinary.com/dxxzqmxu5/image/upload/f_auto,q_auto/g1jghbvomtdze3kwqpky',
     },
     {
       name: 'Golf Pants',
@@ -93,6 +95,7 @@ const data = {
       description: 'A popular pants',
     },
   ],
+  
 };
 
 export default data;

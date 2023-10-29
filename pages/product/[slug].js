@@ -9,6 +9,10 @@ import Product from '../../models/Product';
 import db from '../../utils/db';
 import { Store } from '../../utils/Store';
 
+import '@fortawesome/fontawesome-free/css/all.css';
+import { BsPhoneVibrate } from 'react-icons/bs';
+
+
 export default function ProductScreen(props) {
   const { product } = props;
   const { state, dispatch } = useContext(Store);
@@ -22,32 +26,30 @@ export default function ProductScreen(props) {
     const quantity = existItem ? existItem.quantity + 1 : 1;
     const { data } = await axios.get(`/api/products/${product._id}`);
 
+
     if (data.countInStock < quantity) {
       return toast.error('Sorry. Product is out of stock');
     }
-
+    
     dispatch({ type: 'CART_ADD_ITEM', payload: { ...product, quantity } });
     router.push('/cart');
-  };
+    };
 
+    
   return (
     <Layout title={product.name}>
-      <div className="py-2">
-        <Link href="/">back to products</Link>
+      <div className="mt-0 mb-3">
+        <Link href="/">Back to Products</Link>
       </div>
-      <div className="grid md:grid-cols-4 md:gap-3">
-        <div className="md:col-span-2">
+      <div className="grid md:grid-cols-2 sm:gap-3">
+        <div className="md:col-span-1">
           <Image
             src={product.image}
             alt={product.name}
-            width={640}
-            height={640}
+            width={450}
+            height={450}
             sizes="100vw"
-            style={{
-              width: '100%',
-              height: 'auto',
-            }}
-          ></Image>
+            ></Image>
         </div>
         <div>
           <ul>
@@ -56,34 +58,37 @@ export default function ProductScreen(props) {
             </li>
             <li>Category: {product.category}</li>
             <li>Brand: {product.brand}</li>
-            <li>
-              {product.rating} of {product.numReviews} reviews
-            </li>
+            
             <li>Description: {product.description}</li>
+            <li>
+             Status: {product.countInStock > 0 ? 'In stock' : 'Unavailable'}
+            </li>
+           {/*<li>
+              {product.rating} of {product.numReviews} reviews
+            </li>*/}
           </ul>
-        </div>
-        <div>
-          <div className="card p-5">
-            <div className="mb-2 flex justify-between">
-              <div>Price</div>
-              <div>${product.price}</div>
-            </div>
-            <div className="mb-2 flex justify-between">
-              <div>Status</div>
-              <div>{product.countInStock > 0 ? 'In stock' : 'Unavailable'}</div>
-            </div>
+          <div>Price:&nbsp;&nbsp;ETB&nbsp;{product.price}</div>
+          <div style={{display: 'flex', justifyContent: 'center'}}>
+         
             <button
-              className="primary-button w-full"
-              onClick={addToCartHandler}
-            >
-              Add to cart
-            </button>
-          </div>
-        </div>
-      </div>
+                className="primary-button"
+                onClick={addToCartHandler}
+              >
+                Add to cart
+              </button> 
+
+              <a href="tel:2519111111" className="primary-button">
+                <span style={{display: 'flex', alignItems: 'center',}}>
+                <BsPhoneVibrate size={28} />
+                <span style={{marginLeft: '10px'}}>2519111111</span> 
+                </span>
+              </a>
+           </div>        
+          </div>       
+        </div> 
     </Layout>
-  );
-}
+    );
+  }
 
 export async function getServerSideProps(context) {
   const { params } = context;

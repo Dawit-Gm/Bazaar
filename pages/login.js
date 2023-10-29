@@ -44,7 +44,7 @@ export default function LoginScreen() {
         className="mx-auto max-w-screen-md"
         onSubmit={handleSubmit(submitHandler)}
       >
-        <h1 className="mb-4 text-xl">Login</h1>
+        <h1 className="mb-4 text-xl">LogIn</h1>
         <div className="mb-4">
           <label htmlFor="email">Email</label>
           <input
@@ -81,7 +81,7 @@ export default function LoginScreen() {
           )}
         </div>
         <div className="mb-4 ">
-          <button className="primary-button">Login</button>
+          <button className="primary-button">LogIn</button>
         </div>
         <div className="mb-4 ">
           Don&apos;t have an account? &nbsp;

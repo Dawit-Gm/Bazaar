@@ -1,5 +1,5 @@
 import { getToken } from 'next-auth/jwt';
-import Order from '../../../models/Order';
+//import Order from '../../../models/Order';
 import Product from '../../../models/Product';
 import User from '../../../models/User';
 import db from '../../../utils/db';
@@ -12,11 +12,11 @@ const handler = async (req, res) => {
 
   await db.connect();
 
-  const ordersCount = await Order.countDocuments();
+  //const ordersCount = await Order.countDocuments();
   const productsCount = await Product.countDocuments();
   const usersCount = await User.countDocuments();
 
-  const ordersPriceGroup = await Order.aggregate([
+  /*const ordersPriceGroup = await Order.aggregate([
     {
       $group: {
         _id: null,
@@ -34,10 +34,10 @@ const handler = async (req, res) => {
         totalSales: { $sum: '$totalPrice' },
       },
     },
-  ]);
+  ]);*/
 
   await db.disconnect();
-  res.send({ ordersCount, productsCount, usersCount, ordersPrice, salesData });
+  res.send({ /*ordersCount,*/ productsCount, usersCount /*, ordersPrice, salesData */});
 };
 
 export default handler;
