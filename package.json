@@ -6,7 +6,7 @@
     "deploy": "npm run build &&  rsync --exclude=.git -azP . ubuntu@3.98.5.128:/home/ubuntu/apps/next-amazona",
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "server.js",
     "lint": "next lint"
   },
   "dependencies": {

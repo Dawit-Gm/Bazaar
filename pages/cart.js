@@ -4,17 +4,16 @@ import React, { useContext } from 'react';
 import XCircleIcon from '@heroicons/react/24/outline/XCircleIcon';
 import Layout from '../components/Layout';
 import { Store } from '../utils/Store';
-import { useRouter } from 'next/router';
+//import { useRouter } from 'next/router';
 import dynamic from 'next/dynamic';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import '@fortawesome/fontawesome-free/css/all.css';
 import { BsPhoneVibrate } from 'react-icons/bs';
-import { useState } from 'react';
 
 
 function CartScreen() {
-  const router = useRouter();
+  //const router = useRouter();
   const { state, dispatch } = useContext(Store);
   const {
     cart: { cartItems },

@@ -13,8 +13,8 @@ import { BsCart4 } from 'react-icons/bs';
 import { Bars3Icon } from '@heroicons/react/24/solid';
 import { BsX } from 'react-icons/bs';
 
-export default function Layout({ title, children, homepage }) {
-  const { status, data: session } = useSession();
+export default function Layout({ title, children, /*homepage*/ }) {
+  const { /*status,*/ data: session } = useSession();
   const { state, dispatch } = useContext(Store);
   const { cart } = state;
   const [cartItemsCount, setCartItemsCount] = useState(0);

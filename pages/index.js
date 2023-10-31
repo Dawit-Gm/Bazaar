@@ -36,7 +36,7 @@ export default function Home({ products, featuredProducts }) {
             <Link href={`/product/${product.slug}`} passHref className="flex">
               <img src={product.banner} 
                 alt={product.name}
-                />
+              />
             </Link>
           </div>
         ))}

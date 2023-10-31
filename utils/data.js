@@ -28,7 +28,7 @@ const data = {
       countInStock: 20,
       description: 'A popular shirt',
       isFeatured: true,
-      banner: '/images/banner1.jpg',
+      banner: 'https://res.cloudinary.com/dxxzqmxu5/image/upload/v1689594094/banner2_dvibxa.jpg',
     },
     {
       name: 'Fit Shirt',
@@ -42,7 +42,7 @@ const data = {
       countInStock: 20,
       description: 'A popular shirt',
       isFeatured: true,
-      banner: '/images/banner2.jpg',
+      banner: 'https://res.cloudinary.com/dxxzqmxu5/image/upload/v1689594059/banner1_tsl0jc.jpg',
     },
     {
       name: 'Slim Shirt',
@@ -55,8 +55,6 @@ const data = {
       numReviews: 3,
       countInStock: 20,
       description: 'A popular shirt',
-      //isFeatured: true,
-      //banner: 'https://res.cloudinary.com/dxxzqmxu5/image/upload/f_auto,q_auto/g1jghbvomtdze3kwqpky',
     },
     {
       name: 'Golf Pants',
