@@ -1,22 +1,14 @@
 import Link from 'next/link';
 import React from 'react';
-import Image from 'next/image';
+//import Image from 'next/image';
 
 export default function ProductItem({ product, addToCartHandler }) {
   return (
     <div className="card">
       <Link href={`/product/${product.slug}`}> 
-      <Image
-        src={product.image}
-        alt={product.name}
-        width={100}
-        height={100}
-        sizes="100vw"
-        style={{
-          width: '100%',
-          height: '78%',
-        }}
-      ></Image>
+      <img src={product.image}
+           alt={product.name}
+      />
       </Link>
       <div className="flex flex-col">
         <Link href={`/product/${product.slug}`}> 
