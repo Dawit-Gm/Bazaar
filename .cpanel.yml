@@ -12,5 +12,4 @@ deployment:
     - /bin/cp next.config.js $DEPLOYPATH
     - /bin/cp package.json $DEPLOYPATH
     - /bin/cp postcss.config.js $DEPLOYPATH
-    - /bin/cp server.js $DEPLOYPATH
     - /bin/cp tailwind.config.js $DEPLOYPATH
