@@ -294,7 +294,7 @@ export default function Layout({ title, children, /*homepage*/ }) {
   <main 
     style={{ marginLeft:'0px', marginRight:'0px', marginTop:'16px', width: '96%' }}>{children}
   </main>
- <footer className="footer flex h-10 justify-center items-center shadow-inner">
+ <footer className="footer flex h-10 mt-4 justify-center items-center shadow-inner">
       <p>Copyright © 2023 Bazaar</p>
   </footer>
       </div>

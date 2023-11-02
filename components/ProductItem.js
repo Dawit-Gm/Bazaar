@@ -6,13 +6,17 @@ export default function ProductItem({ product, addToCartHandler }) {
   return (
     <div className="card">
       <Link href={`/product/${product.slug}`}> 
-        <Image
-            src={product.image}
-            alt={product.name}
-            width={450}
-            height={450}
-            sizes="100vw"
-        ></Image>
+      <Image
+        src={product.image}
+        alt={product.name}
+        width={100}
+        height={100}
+        sizes="100vw"
+        style={{
+          width: '100%',
+          height: '78%',
+        }}
+      ></Image>
       </Link>
       <div className="flex flex-col">
         <Link href={`/product/${product.slug}`}> 
