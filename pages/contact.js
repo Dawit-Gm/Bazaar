@@ -9,7 +9,7 @@ export default function AboutPage() {
      <p> Addis Ababa AA</p>
      <p> Ethiopipa</p>
      <p> Phone & Email</p>
-      <p>Phone: safari: </p>
+      <p>Phone: safari: 0799434941</p>
       Email: 4depigm@gmail.com
       </div>
     </Layout>

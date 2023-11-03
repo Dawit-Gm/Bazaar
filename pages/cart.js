@@ -109,7 +109,7 @@ function CartScreen() {
               <a href="tel:2519111111" className="primary-button">
                 <span style={{display: 'flex', alignItems: 'center',}}>
                 <BsPhoneVibrate size={28} />
-                <span style={{marginLeft: '10px'}}>2519111111</span> 
+                <span style={{marginLeft: '10px'}}>0799434941</span> 
                 </span>
               </a>
               </div>  
