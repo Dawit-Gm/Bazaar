@@ -6,7 +6,8 @@ export default function AboutPage() {
       <div className="about text-center">
       <h1>Address</h1>
      <p> Addis Ketma Merckato</p>
-     <p> Addis Ababa AA</p>
+     <p> Tsega  Plastic Products</p>
+     <p> Addis Ababa A.A</p>
      <p> Ethiopipa</p>
      <p> Phone & Email</p>
       <p>Phone: safari: 0799434941</p>
