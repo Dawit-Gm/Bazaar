@@ -20,7 +20,7 @@ export default function ProductItem({ product, addToCartHandler }) {
       </Link>
       <div className="flex flex-col">
         <Link href={`/product/${product.slug}`}> 
-        <p className="text-lg text-left cardname"> 
+        <p className="text-md text-left cardname"> 
          {product.name}</p>
          </Link> 
          <p className="text-left price">ETB&nbsp;&nbsp;{product.price}&nbsp;&nbsp; 

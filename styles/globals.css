@@ -54,14 +54,14 @@ textarea:focus {
 
  .carousel {
       top: -16px;
-      left: 2%;
-      right: 2%;
+      left: 0%;
+      right: 0%;
      }
    .grid {
       top: -14px;
-      left: 2%;
-      right: 2%;
-      gap: 0.5rem;
+      left: 0%;
+      right: 0%;
+      gap: 0.1rem;
       position: relative;
        } 
    .card{
