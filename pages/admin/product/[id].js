@@ -89,7 +89,7 @@ export default function AdminProductEditScreen() {
 
   const router = useRouter();
 
-  const uploadHandler = async (e, imageField = 'image') => {
+  const uploadHandler = async (e, imageFile = 'image') => {
     const url = `https://api.cloudinary.com/v1_1/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/upload`;
     try {
       dispatch({ type: 'UPLOAD_REQUEST' });
@@ -106,7 +106,7 @@ export default function AdminProductEditScreen() {
       formData.append('api_key', process.env.NEXT_PUBLIC_CLOUDINARY_API_KEY);
       const { data } = await axios.post(url, formData);
       dispatch({ type: 'UPLOAD_SUCCESS' });
-      setValue('image', data.secure_url);
+      setValue(imageFile, data.secure_url);
       toast.success('File uploaded successfully');
     } catch (err) {
       dispatch({ type: 'UPLOAD_FAIL', payload: getError(err) });

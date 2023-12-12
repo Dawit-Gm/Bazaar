@@ -15,6 +15,13 @@ import { BsPhoneVibrate } from 'react-icons/bs';
 
 export default function ProductScreen(props) {
   const { product } = props;
+
+  let mainImage = product.image[0];  
+  let images = product.image.filter(img => img !== mainImage);
+
+  const [currentMainImage, setMainImage] = useState(mainImage);
+  const [currentImages, setImages] = useState(images);
+ 
   const { state, dispatch } = useContext(Store);
   const router = useRouter();
   if (!product) {
@@ -34,11 +41,8 @@ export default function ProductScreen(props) {
     dispatch({ type: 'CART_ADD_ITEM', payload: { ...product, quantity } });
     router.push('/cart');
     };
-    
-    const [mainImage, setMainImage] = useState(product.image[0]);
-    const [Images, setImages] = useState(product.image.filter(img => img !== mainImage));
 
-    
+       
   return (
     <Layout title={product.name}>
       <div className="mt-0 mb-3">
@@ -47,7 +51,7 @@ export default function ProductScreen(props) {
       <div className="grid md:grid-cols-2 md:gap-5">
         <div className="md:col-span-1 ">
           <Image
-            src={mainImage}
+            src={currentMainImage}
             alt={product.name}
             width={650}
             height={450}
@@ -55,7 +59,7 @@ export default function ProductScreen(props) {
             ></Image> 
 
       <div style={{ display: 'flex' }}>
-       {Images.map((img, index) => (
+       {currentImages.map((img, index) => (
        <Image
         key={index}
         src={img}
