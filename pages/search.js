@@ -24,6 +24,10 @@ const prices = [
     name: 'ETB 201 to 1000',
     value: '201-1000',
   },
+  {
+    name: 'Above ETB 1000',
+    value: '>1000',
+  },
 ];
 
 const ratings = [1, 2, 3, 4, 5];

@@ -7,6 +7,8 @@ import { toast } from 'react-toastify';
 import Layout from '../../../components/Layout';
 import { getError } from '../../../utils/error';
 
+
+
 function reducer(state, action) {
   switch (action.type) {
     case 'FETCH_REQUEST':
@@ -22,21 +24,31 @@ function reducer(state, action) {
     case 'UPDATE_FAIL':
       return { ...state, loadingUpdate: false, errorUpdate: action.payload };
     case 'UPLOAD_REQUEST':
-      return { ...state, loadingUpload: true, errorUpload: '' };
+      return { 
+        ...state, 
+        loadingUpload: true, 
+        errorUpload: '' 
+      };
     case 'UPLOAD_SUCCESS':
       return {
         ...state,
         loadingUpload: false,
-        errorUpload: '',
+        errorUpload: ''
       };
     case 'UPLOAD_FAIL':
-      return { ...state, loadingUpload: false, errorUpload: action.payload };
+      return {
+         ...state,
+         loadingUpload: false, 
+         errorUpload: action.payload 
+      };
 
     default:
       return state;
   }
 }
 export default function AdminProductEditScreen() {
+
+
   const { query } = useRouter();
   const productId = query.id;
   const [{ loading, error, loadingUpdate, loadingUpload }, dispatch] =
@@ -61,7 +73,8 @@ export default function AdminProductEditScreen() {
         setValue('name', data.name);
         setValue('slug', data.slug);
         setValue('price', data.price);
-        setValue('image', data.image);
+        setValue('location', data.location);
+        setValue('image', data.image); 
         setValue('category', data.category);
         setValue('brand', data.brand);
         setValue('countInStock', data.countInStock);
@@ -85,6 +98,7 @@ export default function AdminProductEditScreen() {
       } = await axios('/api/admin/cloudinary-sign');
 
       const file = e.target.files[0];
+      if (!file) return;
       const formData = new FormData();
       formData.append('file', file);
       formData.append('signature', signature);
@@ -92,7 +106,7 @@ export default function AdminProductEditScreen() {
       formData.append('api_key', process.env.NEXT_PUBLIC_CLOUDINARY_API_KEY);
       const { data } = await axios.post(url, formData);
       dispatch({ type: 'UPLOAD_SUCCESS' });
-      setValue(imageField, data.secure_url);
+      setValue('image', data.secure_url);
       toast.success('File uploaded successfully');
     } catch (err) {
       dispatch({ type: 'UPLOAD_FAIL', payload: getError(err) });
@@ -105,6 +119,7 @@ export default function AdminProductEditScreen() {
     slug,
     price,
     category,
+    location,
     image,
     brand,
     countInStock,
@@ -117,6 +132,7 @@ export default function AdminProductEditScreen() {
         slug,
         price,
         category,
+        location,
         image,
         brand,
         countInStock,
@@ -204,19 +220,36 @@ export default function AdminProductEditScreen() {
                 )}
               </div>
               <div className="mb-4">
-                <label htmlFor="image">image</label>
+                <label htmlFor="image">Location</label>
                 <input
                   type="text"
                   className="w-full"
-                  id="image"
-                  {...register('image', {
-                    required: 'Please enter image',
+                  id="location"
+                  {...register('location', {
+                    required: 'Please enter location',
                   })}
                 />
                 {errors.image && (
                   <div className="text-red-500">{errors.image.message}</div>
                 )}
               </div>
+             
+              <div className="mb-4">
+                <label htmlFor="addImg">Image urls</label>
+                <input
+                  type="text"
+                  className="w-full"
+                  id="image"
+                  {...register('image', {
+                    required: 'Please enter image urls separated with comma',
+                  })}           
+                 />
+               {errors.image && (
+                  <div className="text-red-500">{errors.image.message}</div>
+                )}  
+              </div>
+
+
               <div className="mb-4">
                 <label htmlFor="imageFile">Upload image</label>
                 <input
@@ -225,11 +258,12 @@ export default function AdminProductEditScreen() {
                   id="imageFile"
                   onChange={uploadHandler}
                 />
-
                 {loadingUpload && <div>Uploading....</div>}
-              </div>
+               </div>
+
+
               <div className="mb-4">
-                <label htmlFor="category">category</label>
+                <label htmlFor="category">Category</label>
                 <input
                   type="text"
                   className="w-full"
@@ -243,7 +277,7 @@ export default function AdminProductEditScreen() {
                 )}
               </div>
               <div className="mb-4">
-                <label htmlFor="brand">brand</label>
+                <label htmlFor="brand">Brand</label>
                 <input
                   type="text"
                   className="w-full"
@@ -257,7 +291,7 @@ export default function AdminProductEditScreen() {
                 )}
               </div>
               <div className="mb-4">
-                <label htmlFor="countInStock">countInStock</label>
+                <label htmlFor="countInStock">CountInStock</label>
                 <input
                   type="text"
                   className="w-full"
@@ -273,7 +307,7 @@ export default function AdminProductEditScreen() {
                 )}
               </div>
               <div className="mb-4">
-                <label htmlFor="countInStock">description</label>
+                <label htmlFor="countInStock">Description</label>
                 <input
                   type="text"
                   className="w-full"

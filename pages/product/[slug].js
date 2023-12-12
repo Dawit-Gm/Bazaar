@@ -2,7 +2,7 @@ import axios from 'axios';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import React, { useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import { toast } from 'react-toastify';
 import Layout from '../../components/Layout';
 import Product from '../../models/Product';
@@ -34,6 +34,9 @@ export default function ProductScreen(props) {
     dispatch({ type: 'CART_ADD_ITEM', payload: { ...product, quantity } });
     router.push('/cart');
     };
+    
+    const [mainImage, setMainImage] = useState(product.image[0]);
+    const [Images, setImages] = useState(product.image.filter(img => img !== mainImage));
 
     
   return (
@@ -41,35 +44,54 @@ export default function ProductScreen(props) {
       <div className="mt-0 mb-3">
         <Link href="/">Back to Products</Link>
       </div>
-      <div className="grid md:grid-cols-2 sm:gap-3">
-        <div className="md:col-span-1">
+      <div className="grid md:grid-cols-2 md:gap-5">
+        <div className="md:col-span-1 ">
           <Image
-            src={product.image}
+            src={mainImage}
             alt={product.name}
-            width={450}
+            width={650}
             height={450}
             sizes="100vw"
-            ></Image>
-        </div>
-        <div>
+            ></Image> 
+
+      <div style={{ display: 'flex' }}>
+       {Images.map((img, index) => (
+       <Image
+        key={index}
+        src={img}
+        width={90}
+        height={90} 
+        sizes="100vw"
+        onClick={() => {
+          setMainImage(img);
+          setImages(product.image.filter(image => image !== img));
+        }}
+        style={{ marginTop:'5px', margin:'2px', cursor: 'pointer'}}
+      />
+      ))}
+       
+     </div>
+      </div>
+        <div style={{ marginTop:'5px', marginLeft:'0px'}}>
           <ul>
             <li>
               <h1 className="text-lg">{product.name}</h1>
             </li>
             <li>Category: {product.category}</li>
-            <li>Brand: {product.brand}</li>
-            
-            <li>Description: {product.description}</li>
+            <li>Brand: {product.brand}</li>          
             <li>
              Status: {product.countInStock > 0 ? 'In stock' : 'Unavailable'}
             </li>
-           {/*<li>
-              {product.rating} of {product.numReviews} reviews
-            </li>*/}
-          </ul>
-          <div>Price:&nbsp;&nbsp;ETB&nbsp;{product.price}</div>
-          <div style={{display: 'flex', justifyContent: 'center'}}>
-         
+           <li>
+              Number of views: {product.numberOfViews} views
+            </li>
+            <li>
+              Location: {product.location}
+            </li>
+            <div>Price:&nbsp;&nbsp;ETB&nbsp;{product.price}</div>
+            <li>Description: {product.description}</li>
+         </ul>
+          <div style={{display: 'flex'}}>
             <button
                 className="primary-button"
                 onClick={addToCartHandler}
@@ -77,7 +99,7 @@ export default function ProductScreen(props) {
                 Add to cart
               </button> 
 
-              <a href="tel:2519111111" className="primary-button">
+              <a href="tel:0799434941" className="primary-button">
                 <span style={{display: 'flex', alignItems: 'center',}}>
                 <BsPhoneVibrate size={28} />
                 <span style={{marginLeft: '10px'}}>0799434941</span> 

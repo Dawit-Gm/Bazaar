@@ -26,8 +26,7 @@ const postHandler = async (req, res) => {
     brand: 'sample brand',
     countInStock: 0,
     description: 'sample description',
-    rating: 0,
-    numReviews: 0,
+    numberOfviews: 0,
   });
 
   const product = await newProduct.save();

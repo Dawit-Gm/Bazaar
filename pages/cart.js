@@ -4,7 +4,6 @@ import React, { useContext } from 'react';
 import XCircleIcon from '@heroicons/react/24/outline/XCircleIcon';
 import Layout from '../components/Layout';
 import { Store } from '../utils/Store';
-//import { useRouter } from 'next/router';
 import dynamic from 'next/dynamic';
 import axios from 'axios';
 import { toast } from 'react-toastify';
@@ -13,7 +12,6 @@ import { BsPhoneVibrate } from 'react-icons/bs';
 
 
 function CartScreen() {
-  //const router = useRouter();
   const { state, dispatch } = useContext(Store);
   const {
     cart: { cartItems },
@@ -60,7 +58,7 @@ function CartScreen() {
                         className="flex items-center"
                       >
                         <Image
-                          src={item.image}
+                          src={item.image[0]}
                           alt={item.name}
                           width={50}
                           height={50}
@@ -106,7 +104,7 @@ function CartScreen() {
                 </div>
               </li>
               <div style={{display: 'flex', justifyContent: 'center'}}>
-              <a href="tel:2519111111" className="primary-button">
+              <a href="tel:0799434941" className="primary-button">
                 <span style={{display: 'flex', alignItems: 'center',}}>
                 <BsPhoneVibrate size={28} />
                 <span style={{marginLeft: '10px'}}>0799434941</span> 

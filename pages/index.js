@@ -9,9 +9,8 @@ import { Store } from '../utils/Store';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import GridLayout from 'react-grid-layout';
-import Link from 'next/link';
 
-export default function Home({ products, featuredProducts }) {
+export default function Home({ products }) {
   const { state, dispatch } = useContext(Store);
   const { cart } = state;
 
@@ -28,20 +27,17 @@ export default function Home({ products, featuredProducts }) {
     toast.success('Product added to the cart');
   };
 
+    const imageUrls = ['https://res.cloudinary.com/dxxzqmxu5/image/upload/v1689594094/banner2_dvibxa.jpg', 
+                      'https://res.cloudinary.com/dxxzqmxu5/image/upload/v1689594059/banner1_tsl0jc.jpg'];
   return (
     <Layout>
       <Carousel showThumbs={false} autoPlay>
-        {featuredProducts.map((product) => (
-          <div key={product._id}>
-            <Link href={`/product/${product.slug}`} passHref className="flex">
-              <img src={product.banner} 
-                alt={product.name}
-              />
-            </Link>
-          </div>
+        {imageUrls.map((url, index) => (
+        <div key={index}>
+        <img src={url} alt={`Image ${index + 1}`} />
+        </div>
         ))}
-      </Carousel>
-      
+      </Carousel>      
       <GridLayout className="grid grid-cols-1 xxs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
         {products.map((product) => (
           <ProductItem
