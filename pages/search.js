@@ -9,7 +9,7 @@ import ProductItem from '../components/ProductItem';
 import Product from '../models/Product';
 import db from '../utils/db';
 
-const PAGE_SIZE = 2;
+//const PAGE_SIZE = 2;
 
 const prices = [
   {
@@ -30,7 +30,7 @@ const prices = [
   },
 ];
 
-const ratings = [1, 2, 3, 4, 5];
+//const ratings = [1, 2, 3, 4, 5];
 
 export default function Search(props) {
   const router = useRouter();
@@ -40,15 +40,15 @@ export default function Search(props) {
     category = 'all',
     brand = 'all',
     price = 'all',
-    rating = 'all',
+    //rating = 'all',
     sort = 'featured',
-    page = 1,
+    //page = 1,
   } = router.query;
 
-  const { products, countProducts, categories, brands, pages } = props;
+  const { products, countProducts, categories, brands/*, pages*/ } = props;
 
   const filterSearch = ({
-    page,
+   // page,
     category,
     brand,
     sort,
@@ -56,16 +56,16 @@ export default function Search(props) {
     max,
     searchQuery,
     price,
-    rating,
+   // rating,
   }) => {
     const { query } = router;
-    if (page) query.page = page;
+   // if (page) query.page = page;
     if (searchQuery) query.searchQuery = searchQuery;
     if (sort) query.sort = sort;
     if (category) query.category = category;
     if (brand) query.brand = brand;
     if (price) query.price = price;
-    if (rating) query.rating = rating;
+   // if (rating) query.rating = rating;
     if (min) query.min ? query.min : query.min === 0 ? 0 : min;
     if (max) query.max ? query.max : query.max === 0 ? 0 : max;
 
@@ -77,9 +77,9 @@ export default function Search(props) {
   const categoryHandler = (e) => {
     filterSearch({ category: e.target.value });
   };
-  const pageHandler = (page) => {
+ /* const pageHandler = (page) => {
     filterSearch({ page });
-  };
+  };*/
   const brandHandler = (e) => {
     filterSearch({ brand: e.target.value });
   };
@@ -89,9 +89,9 @@ export default function Search(props) {
   const priceHandler = (e) => {
     filterSearch({ price: e.target.value });
   };
-  const ratingHandler = (e) => {
+  /*const ratingHandler = (e) => {
     filterSearch({ rating: e.target.value });
-  };
+  };*/
 
   const { state, dispatch } = useContext(Store);
   const addToCartHandler = async (product) => {
@@ -109,7 +109,7 @@ export default function Search(props) {
     <Layout title="search">
       <div className="grid md:grid-cols-4 md:gap-5">
         <div>
-          <div className="my-3">
+          <div className="my-3 w-full">
             <h2>Categories</h2>
             <select
               className="w-full"
@@ -127,7 +127,9 @@ export default function Search(props) {
           </div>
           <div className="mb-3">
             <h2>Brands</h2>
-            <select className="w-full" value={brand} onChange={brandHandler}>
+            <select 
+               className="w-full"
+             value={brand} onChange={brandHandler}>
               <option value="all">All</option>
               {brands &&
                 brands.map((brand) => (
@@ -139,7 +141,9 @@ export default function Search(props) {
           </div>
           <div className="mb-3">
             <h2>Prices</h2>
-            <select className="w-full" value={price} onChange={priceHandler}>
+            <select 
+              className="w-full" 
+             value={price} onChange={priceHandler}>
               <option value="all">All</option>
               {prices &&
                 prices.map((price) => (
@@ -149,9 +153,11 @@ export default function Search(props) {
                 ))}
             </select>
           </div>
-          <div className="mb-3">
+          {/*<div className="mb-3">
             <h2>Ratings</h2>
-            <select className="w-full" value={rating} onChange={ratingHandler}>
+            </div><select
+              </div> className="w-full"
+               value={rating} onChange={ratingHandler}>
               <option value="all">All</option>
               {ratings &&
                 ratings.map((rating) => (
@@ -159,10 +165,20 @@ export default function Search(props) {
                     {rating} star{rating > 1 && 's'} & up
                   </option>
                 ))}
-            </select>
-          </div>
+            </select></Layout>
+          </div>*/}
         </div>
         <div className="md:col-span-3">
+          <div>
+              Sort by{' '}
+              <select value={sort} onChange={sortHandler}>
+                <option value="featured">Featured</option>
+                <option value="lowest">Price: Low to High</option>
+                <option value="highest">Price: High to Low</option>
+                {/* <option value="toprated">Customer Reviews</option>*/}
+                <option value="newest">Newest Arrivals</option>
+              </select>
+            </div>
           <div className="mb-2 flex items-center justify-between border-b-2 pb-2">
             <div className="flex items-center">
               {products.length === 0 ? 'No' : countProducts} Results
@@ -170,31 +186,22 @@ export default function Search(props) {
               {category !== 'all' && ' : ' + category}
               {brand !== 'all' && ' : ' + brand}
               {price !== 'all' && ' : Price ' + price}
-              {rating !== 'all' && ' : Rating ' + rating + ' & up'}
+              {/*{rating !== 'all' && ' : Rating ' + rating + ' & up'}*/}
               &nbsp;
               {(query !== 'all' && query !== '') ||
               category !== 'all' ||
               brand !== 'all' ||
-              rating !== 'all' ||
+             // rating !== 'all' ||
               price !== 'all' ? (
                 <button onClick={() => router.push('/search')}>
                   <XCircleIcon className="h-5 w-5" />
                 </button>
               ) : null}
             </div>
-            <div>
-              Sort by{' '}
-              <select value={sort} onChange={sortHandler}>
-                <option value="featured">Featured</option>
-                <option value="lowest">Price: Low to High</option>
-                <option value="highest">Price: High to Low</option>
-                <option value="toprated">Customer Reviews</option>
-                <option value="newest">Newest Arrivals</option>
-              </select>
-            </div>
+            
           </div>
           <div>
-            <div className="grid grid-cols-1 gap-4 md:grid-cols-3  ">
+           <div className="grid grid-cols-2 gap-4 md:grid-cols-3  ">
               {products.map((product) => (
                 <ProductItem
                   key={product._id}
@@ -203,7 +210,7 @@ export default function Search(props) {
                 />
               ))}
             </div>
-            <ul className="flex">
+          {/* <ul className="flex">
               {products.length > 0 &&
                 [...Array(pages).keys()].map((pageNumber) => (
                   <li key={pageNumber}>
@@ -217,8 +224,8 @@ export default function Search(props) {
                     </button>
                   </li>
                 ))}
-            </ul>
-          </div>
+            </ul>*/}
+         </div>
         </div>
       </div>
     </Layout>
@@ -226,12 +233,12 @@ export default function Search(props) {
 }
 
 export async function getServerSideProps({ query }) {
-  const pageSize = query.pageSize || PAGE_SIZE;
-  const page = query.page || 1;
+  //const pageSize = query.pageSize || PAGE_SIZE;
+  //const page = query.page || 1;
   const category = query.category || '';
   const brand = query.brand || '';
   const price = query.price || '';
-  const rating = query.rating || '';
+  //const rating = query.rating || '';
   const sort = query.sort || '';
   const searchQuery = query.query || '';
 
@@ -246,14 +253,14 @@ export async function getServerSideProps({ query }) {
       : {};
   const categoryFilter = category && category !== 'all' ? { category } : {};
   const brandFilter = brand && brand !== 'all' ? { brand } : {};
-  const ratingFilter =
+  /*const ratingFilter =
     rating && rating !== 'all'
       ? {
           rating: {
             $gte: Number(rating),
           },
         }
-      : {};
+      : {};*/
   // 10-50
   const priceFilter =
     price && price !== 'all'
@@ -286,13 +293,13 @@ export async function getServerSideProps({ query }) {
       ...categoryFilter,
       ...priceFilter,
       ...brandFilter,
-      ...ratingFilter,
+      //...ratingFilter,
     },
     '-reviews'
   )
     .sort(order)
-    .skip(pageSize * (page - 1))
-    .limit(pageSize)
+    //.skip(pageSize * (page - 1))
+   // .limit(pageSize)
     .lean();
 
   const countProducts = await Product.countDocuments({
@@ -300,7 +307,7 @@ export async function getServerSideProps({ query }) {
     ...categoryFilter,
     ...priceFilter,
     ...brandFilter,
-    ...ratingFilter,
+   // ...ratingFilter,
   });
 
   await db.disconnect();
@@ -310,8 +317,8 @@ export async function getServerSideProps({ query }) {
     props: {
       products,
       countProducts,
-      page,
-      pages: Math.ceil(countProducts / pageSize),
+     // page,
+      //pages: Math.ceil(countProducts / pageSize),
       categories,
       brands,
     },

@@ -250,7 +250,7 @@ export default function AdminProductEditScreen() {
               </div>
 
 
-              <div className="mb-4">
+              {/*<div className="mb-4">
                 <label htmlFor="imageFile">Upload image</label>
                 <input
                   type="file"
@@ -259,7 +259,7 @@ export default function AdminProductEditScreen() {
                   onChange={uploadHandler}
                 />
                 {loadingUpload && <div>Uploading....</div>}
-               </div>
+               </div>*/}
 
 
               <div className="mb-4">

@@ -81,18 +81,18 @@ export default function ProductScreen(props) {
             <li>
               <h1 className="text-lg">{product.name}</h1>
             </li>
-            <li>Category: {product.category}</li>
-            <li>Brand: {product.brand}</li>          
-            <li>
-             Status: {product.countInStock > 0 ? 'In stock' : 'Unavailable'}
-            </li>
-           <li>
-              Number of views: {product.numberOfViews} views
-            </li>
+            <div>Price:&nbsp;&nbsp;ETB&nbsp;{product.price}</div>
+            <li>Category: {product.category}</li>         
+            <li>Brand: {product.brand}</li>  
             <li>
               Location: {product.location}
             </li>
-            <div>Price:&nbsp;&nbsp;ETB&nbsp;{product.price}</div>
+            <li>
+             Status: {product.countInStock > 0 ? 'In stock' : 'Unavailable'}
+            </li>
+            <li>
+              Number of views: {product.numberOfViews} views
+            </li>
             <li>Description: {product.description}</li>
          </ul>
           <div style={{display: 'flex'}}>

@@ -2,10 +2,15 @@ import Link from 'next/link';
 import React from 'react';
 import Image from 'next/image';
 
+//import { incrementViews } from '../utils/product';
+
+
 export default function ProductItem({ product, addToCartHandler }) {
   return (
     <div className="card">
-      <Link href={`/product/${product.slug}`}> 
+      <Link href={`/product/${product.slug}`}
+        //</div> onClick={() => incrementViews(product._id)} 
+        > 
       <Image
         src={product.image[0]}
         alt={product.name}
@@ -26,7 +31,10 @@ export default function ProductItem({ product, addToCartHandler }) {
          <p className="text-left price">ETB&nbsp;&nbsp;{product.price}&nbsp;&nbsp; 
          <span
             className="add-cart"
-            onClick={() => addToCartHandler(product)}
+            onClick={() => {
+              addToCartHandler(product);
+              //incrementViews(product._id);
+            }}
              >
             Add to cart
            </span></p>
