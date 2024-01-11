@@ -10,7 +10,6 @@ import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import GridLayout from 'react-grid-layout';
 
-//import { incrementViews } from '../utils/product';
 
 
 export default function Home({ products }) {
@@ -22,11 +21,13 @@ export default function Home({ products }) {
     const quantity = existItem ? existItem.quantity + 1 : 1;
     const { data } = await axios.get(`/api/products/${product._id}`);
 
-   /* products.forEach(product => {
-      incrementViews(product._id);
-    })*/
+    /*data.numberOfViews++;
+    await axios.put(`/api/products/ ${product._id}`, {
+      numberOfViews: data.numberOfViews
+    });
+    toast.success(data.numberOfViews);*/
   
- 
+
     if (data.countInStock < quantity) {
       return toast.error('Sorry. Product is out of stock');
     }

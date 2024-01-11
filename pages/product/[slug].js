@@ -90,9 +90,9 @@ export default function ProductScreen(props) {
             <li>
              Status: {product.countInStock > 0 ? 'In stock' : 'Unavailable'}
             </li>
-            <li>
+            {/*<li>
               Number of views: {product.numberOfViews} views
-            </li>
+            </li>*/}
             <li>Description: {product.description}</li>
          </ul>
           <div style={{display: 'flex'}}>

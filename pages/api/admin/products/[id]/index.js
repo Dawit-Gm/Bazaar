@@ -37,6 +37,9 @@ const putHandler = async (req, res) => {
     product.image = req.body.image.split(',');
     
     product.brand = req.body.brand;
+
+    //product.numberOfViews = req.body.numberOfViews;
+    
     product.countInStock = req.body.countInStock;
     product.description = req.body.description;
     await product.save();
