@@ -51,7 +51,7 @@ export default function AdminProductEditScreen() {
 
   const { query } = useRouter();
   const productId = query.id;
-  const [{ loading, error, loadingUpdate, loadingUpload }, dispatch] =
+  const [{ loading, error, loadingUpdate, /*loadingUpload*/ }, dispatch] =
     useReducer(reducer, {
       loading: true,
       error: '',
@@ -89,7 +89,7 @@ export default function AdminProductEditScreen() {
 
   const router = useRouter();
 
-  const uploadHandler = async (e, imageFile = 'image') => {
+  /*const uploadHandler = async (e, imageFile = 'image') => {
     const url = `https://api.cloudinary.com/v1_1/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/upload`;
     try {
       dispatch({ type: 'UPLOAD_REQUEST' });
@@ -112,7 +112,7 @@ export default function AdminProductEditScreen() {
       dispatch({ type: 'UPLOAD_FAIL', payload: getError(err) });
       toast.error(getError(err));
     }
-  };
+  };*/
 
   const submitHandler = async ({
     name,
