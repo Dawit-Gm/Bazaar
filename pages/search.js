@@ -8,6 +8,9 @@ import XCircleIcon from '@heroicons/react/24/outline/XCircleIcon';
 import ProductItem from '../components/ProductItem';
 import Product from '../models/Product';
 import db from '../utils/db';
+import Head from 'next/head';
+
+
 
 //const PAGE_SIZE = 2;
 
@@ -107,6 +110,12 @@ export default function Search(props) {
   };
   return (
     <Layout title="search">
+       <Head>
+        <title>Plastic Products in Ethiopia | Buy Affordable Online</title>
+        <meta name="description" content="Shop from the largest selection Ethiopia's #1 Online Store for all Your Plastic product needs. Save trips and shop comfortably online. Then sit back as we deliver at low prices." />
+        <meta name="keywords" content=" Duka, Table, Flowering Vase,Flowering Pot, kichenware, Chair, Bucket, Basket, Dish Drying Shelve, Dustbin, Plastic Box" />
+        <link rel="canonical" href="https://www.bazaar-et.vercel.app.com/" />
+      </Head>
       <div className="grid md:grid-cols-4 md:gap-5">
         <div>
           <div className="my-3 w-full">

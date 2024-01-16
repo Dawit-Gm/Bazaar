@@ -9,7 +9,7 @@ import { Store } from '../utils/Store';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import GridLayout from 'react-grid-layout';
-
+import Head from 'next/head';
 
 
 export default function Home({ products }) {
@@ -40,6 +40,12 @@ export default function Home({ products }) {
                       'https://res.cloudinary.com/dxxzqmxu5/image/upload/v1689594059/banner1_tsl0jc.jpg'];
   return (
     <Layout>
+      <Head>
+        <title>Plastic Products in Ethiopia | Buy Affordable Online</title>
+        <meta name="description" content="Shop from the largest selection Ethiopia's #1 Online Store for all Your Plastic product needs. Save trips and shop comfortably online. Then sit back as we deliver at low prices." />
+        <meta name="keywords" content="Online Store, Plastic Products,Plastic Chair,Plastic Table,Flowering Vase, kichenware, Wholesale, Retail, Low Prices, Ethiopia" />
+        <link rel="canonical" href="https://www.bazaar-et.vercel.app.com/" />
+      </Head>
       <Carousel showThumbs={false} autoPlay>
         {imageUrls.map((url, index) => (
         <div key={index}>

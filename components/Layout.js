@@ -78,7 +78,7 @@ export default function Layout({ title, children}) {
     <>
       <Head>
         <title>{title ? title + ' - Bazaar' : 'Bazaar'}</title>
-        <meta name="description" content="Ecommerce Website" />
+        <meta name="description" content=" Ethiopia's #1 Online Store for all Your Plastic product needs." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

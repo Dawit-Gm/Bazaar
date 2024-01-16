@@ -11,6 +11,7 @@ import { Store } from '../../utils/Store';
 
 import '@fortawesome/fontawesome-free/css/all.css';
 import { BsPhoneVibrate } from 'react-icons/bs';
+import Head from 'next/head';
 
 
 export default function ProductScreen(props) {
@@ -45,6 +46,12 @@ export default function ProductScreen(props) {
        
   return (
     <Layout title={product.name}>
+       <Head>
+        <title>Plastic Products in Ethiopia | Buy Plastic Items at Low Prices Online</title>
+        <meta name="description" content="Shop from the largest selection Ethiopia's #1 Online Store for all Your Plastic product needs. Save trips and shop comfortably online. Then sit back as we deliver at low prices." />
+        <meta name="keywords" content="Arm Chair,Armless Chair, Square Table, Circle Table, Duka, Children's Chair, Children's Table, Flowering Vase,Flowering Pot, kichenware, Small Chair,cleaninig Bucket,Trash Basket,Laundary Basket, Dish Drying Shelve, Dustbin, Plastic Box" />
+        <link rel="canonical" href="https://www.bazaar-et.vercel.app.com/" />
+      </Head>
       <div className="mt-0 mb-3">
         <Link href="/">Back to Products</Link>
       </div>
