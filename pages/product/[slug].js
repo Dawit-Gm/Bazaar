@@ -57,13 +57,13 @@ export default function ProductScreen(props) {
       </div>
       <div className="grid md:grid-cols-2 md:gap-5">
         <div className="md:col-span-1 ">
-          <Image
+         <Image
             src={currentMainImage}
             alt={product.name}
             width={650}
             height={450}
             sizes="100vw"
-            ></Image> 
+          ></Image> 
 
       <div style={{ display: 'flex' }}>
        {currentImages.map((img, index) => (
