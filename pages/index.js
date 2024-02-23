@@ -44,8 +44,9 @@ export default function Home({ products }) {
         <title>Plastic Products in Ethiopia | Buy Affordable Online</title>
         <meta name="google-site-verification" content="LQcA8czKq5n5r2DX8Guc5WMUllIzRZQU3q2JA3ywvII" />
         <meta name="description" content="Shop from the largest selection Ethiopia's #1 Online Store for all Your Plastic product needs. Save trips and shop comfortably online. Then sit back as we deliver at low prices." />
-        <meta name="keywords" content="Online Store, Plastic Products,Plastic Chair,Plastic Table,Flowering Vase, kichenware, Wholesale, Retail, Low Prices, Ethiopia" />
-        <link rel="canonical" href="https://www.bazaar-et.vercel.app.com/" />
+        <meta name="keywords" content="Online Plastic Store, Plastic Products,Plastic Chair,Plastic Table,Flowering Vase, kichenware, Wholesale,Plastic Retail, Low Prices, Addis Ababa Ethiopia" />
+        <link rel="canonical" href="https://www.bazaar.com.et/" />
+        
       </Head>
       <Carousel showThumbs={false} autoPlay>
         {imageUrls.map((url, index) => (

@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://bazaar.com.et
+
+# Sitemaps
+Sitemap: https://bazaar.com.et/sitemap.xml
