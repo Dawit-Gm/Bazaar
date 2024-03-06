@@ -13,7 +13,7 @@ import { BsCart4 } from 'react-icons/bs';
 import { Bars3Icon } from '@heroicons/react/24/solid';
 import { BsX } from 'react-icons/bs';
 
-export default function Layout({ title, children}) {
+export default function Layout({children}) {
   const { data: session } = useSession();
   const { state, dispatch } = useContext(Store);
   const { cart } = state;
@@ -77,11 +77,11 @@ export default function Layout({ title, children}) {
   return (
     <>
       <Head>
-      <title><h1><a href="/">Plastic Products in Ethiopia | Online Store for Plastic Goods</a></h1></title>
+         <title>Plastic Products in Ethiopia | Online Store for Plastic Goods</title>
         <meta name="google-site-verification" content="LQcA8czKq5n5r2DX8Guc5WMUllIzRZQU3q2JA3ywvII" />
         <meta name="description" content="The largest selection Ethiopia's #1 Online Store for all Your Plastic product needs. 
          Shop for affordable plastic products online in Ethiopia. Save time and money with low prices 
-         on plastic arm chair, chairs, tables, kitchenware, dustbin, bread and vegitable create, box, shelf, basket, dish dryer, laundary basket and more with delivery option." />
+         on plastic arm chair, chairs, tables, kitchenware, dustbin, bread and fruit crate, box, shelf, basket, dish dryer, laundary basket and more with delivery option." />
         <meta name="keywords" content="Online Plastic product Suplier in Ethiopia, Plastic Products suplier in Ethiopia , Plastic Chair in Ethiopia, Plastic Table in Ethiopia, Flowering Vase in Ethiopia, kichenware in Ethiopia, Plastic product Wholesale in Ethiopia , Plastic Retail Low Prices in Addis Ababa Ethiopia" />
         <link rel="canonical" href="https://www.bazaar.com.et/" />
         <link rel="icon" href="/favicon.ico" />
