@@ -114,7 +114,7 @@ export default function Search(props) {
         <title>Plastic Products in Ethiopia | Buy Affordable Online</title>
         <meta name="description" content="Shop from the largest selection Ethiopia's #1 Online Store for all Your Plastic product needs. Save trips and shop comfortably online. Then sit back as we deliver at low prices." />
         <meta name="keywords" content=" Duka, Table, Flowering Vase,Flowering Pot, kichenware, Chair, Bucket, Basket, Dish Drying Shelve, Dustbin, Plastic Box" />
-        <link rel="canonical" href="https://www.bazaar-et.vercel.app.com/" />
+        <link rel="canonical" href="https://www.bazaar.com.et/search" />
       </Head>
       <div className="grid md:grid-cols-4 md:gap-5">
         <div>
