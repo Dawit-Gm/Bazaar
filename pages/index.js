@@ -41,10 +41,10 @@ export default function Home({ products }) {
   return (
     <Layout>
       <Head>
-        <title>Plastic items supplier in Ethiopia | Online Shop for Household Plastic Products in Addis Ababa</title>
-        <meta name="description" content="The largest selection Ethiopia's #1 Online Store for all Your Plastic product needs. Shop for household plastic products for low prices online in Ethiopia. Save time and money on plastic arm chair, plastic chairs, plastic tables, plastic kitchenware, plastic dustbin, plastic bread and fruit crate, plastic box, plastic shelf, plastic basket, plastic  dish dryer, plastic laundary basket and more with delivery option." />
-        <meta name="google-site-verification" content="LQcA8czKq5n5r2DX8Guc5WMUllIzRZQU3q2JA3ywvII" />
-        <meta name="keywords" content="Online Plastic product Suplier in Ethiopia, Plastic Products suplier in Ethiopia, Plastic Chair in Ethiopia, Plastic Table in Ethiopia,Plastic Flowering Vase in Ethiopia, Plastic kichenware in Ethiopia, Plastic Product Wholesale in Ethiopia , Plastic Goods Retail Low Prices in Addis Ababa Ethiopia" />
+        <title>Buy Plastic Products Online | Top Plastic Store in Addis Ababa, Ethiopia</title>
+        <meta name="description" content="Ethiopia's top online store for affordable plastic products. Shop for plastic chairs, tables, kitchenware, dustbins, crates, boxes, shelves, baskets, and more. Enjoy quick delivery in Addis Ababa and save time and money." />
+        <meta name="google-site-verification" content="LQcA8czKq5n5r2DX8Guc5WMUllIzRZQU3q2JA3ywvII" /> 
+        <meta name="keywords" content="Online Plastic Products, Plastic Store Ethiopia, Plastic Chairs Addis Ababa, Plastic Tables Addis Ababa, Plastic Kitchenware Ethiopia, Wholesale Plastic Products Ethiopia, Affordable Plastic Goods Ethiopia, Plastic Retail Addis Ababa" />    
         <link rel="canonical" href="https://www.bazaar.com.et/" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

@@ -77,7 +77,7 @@ export default function Layout({children}) {
   return (
     <>
       <Head>
-         <title>Plastic Products in Ethiopia | Online Shop for Plastic Ittems in Addis Ababa</title>
+         <title>Plastic Products in Ethiopia | Online Shop for Plastic Items in Addis Ababa</title>
         <meta name="google-site-verification" content="LQcA8czKq5n5r2DX8Guc5WMUllIzRZQU3q2JA3ywvII" />
         <meta name="description" content="The largest selection Ethiopia's #1 Online Store for all Your Plastic product needs. 
          Shop for affordable plastic products online in Ethiopia. Save time and money with low prices 
