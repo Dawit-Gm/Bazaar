@@ -11,7 +11,10 @@ import { Store } from '../../utils/Store';
 
 import '@fortawesome/fontawesome-free/css/all.css';
 import { BsPhoneVibrate } from 'react-icons/bs';
-import Head from 'next/head';
+//import Head from 'next/head';
+import { JsonLd } from 'react-schemaorg';
+import { DefaultSeo } from 'next-seo';
+
 
 
 export default function ProductScreen(props) {
@@ -46,12 +49,39 @@ export default function ProductScreen(props) {
        
   return (
     <Layout title={product.name}>
-       <Head>
-        <title>Plastic Products in Ethiopia | Buy Plastic Items at Low Prices Online</title>
-        <meta name="description" content="Shop from the largest selection Ethiopia's #1 Online Store for all Your Plastic product needs. Save trips and shop comfortably online. Then sit back as we deliver at low prices." />
-        <meta name="keywords" content="Arm Chair,Armless Chair, Square Table, Circle Table, Duka, Children's Chair, Children's Table, Flowering Vase,Flowering Pot, kichenware, Small Chair,cleaninig Bucket,Trash Basket,Laundary Basket, Dish Drying Shelve, Dustbin, Plastic Box" />
-        <link rel="canonical" href="https://www.bazaar-et.vercel.app.com/" />
-      </Head>
+      {/*<Head>
+        <title>Plastic {product.name} in Ethiopia</title>
+        <meta name="description" content={product.description} /> 
+        <meta name="keywords" content={product.tags.join(', ')} />
+        <link
+          rel="canonical"  
+          href={`https://www.bazaar.com.et/products/${product.slug}`}
+        />
+      </Head>*/}
+     <DefaultSeo
+        title={`Plastic ${product.name} in Ethiopia`}
+        description={product.description}
+        canonical={`https://www.bazaar.com.et/products/${product.slug}`}
+        openGraph={{
+           url: `https://www.bazaar.com.et/products/${product.slug}`,
+           title: `Plastic ${product.name} in Ethiopia`,
+           description: product.description,
+           site_name: 'Bazaar.com',
+          }}
+        additionalMetaTags={[
+          {
+             name: 'keywords',
+             content: product.tags.join(', '),
+              },
+             ]}
+          />
+          <JsonLd
+              itemScope
+              itemType="http://schema.org/WebPage"
+              itemProp="mainEntity"
+              itemID="https://www.bazaar.com.et/"
+              url="https://www.bazaar.com.et/products/${product.slug}"
+          />
       <div className="mt-0 mb-3">
         <Link href="/">Back to Products</Link>
       </div>

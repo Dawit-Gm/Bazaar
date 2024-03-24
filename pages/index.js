@@ -9,7 +9,9 @@ import { Store } from '../utils/Store';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import GridLayout from 'react-grid-layout';
-import Head from 'next/head';
+//import Head from 'next/head';
+import { JsonLd } from 'react-schemaorg';
+import { DefaultSeo } from 'next-seo';
 
 
 export default function Home({ products }) {
@@ -40,14 +42,39 @@ export default function Home({ products }) {
                       'https://res.cloudinary.com/dxxzqmxu5/image/upload/v1689594059/banner1_tsl0jc.jpg'];
   return (
     <Layout>
-      <Head>
+      {/*<Head>
         <title>Buy Plastic Products Online | Top Plastic Store in Addis Ababa, Ethiopia</title>
         <meta name="description" content="Ethiopia's top online store for affordable plastic products. Shop for plastic chairs, tables, kitchenware, dustbins, crates, boxes, shelves, baskets, and more. Enjoy quick delivery in Addis Ababa and save time and money." />
         <meta name="google-site-verification" content="LQcA8czKq5n5r2DX8Guc5WMUllIzRZQU3q2JA3ywvII" /> 
         <meta name="keywords" content="Online Plastic Products, Plastic Store Ethiopia, Plastic Chairs Addis Ababa, Plastic Tables Addis Ababa, Plastic Kitchenware Ethiopia, Wholesale Plastic Products Ethiopia, Affordable Plastic Goods Ethiopia, Plastic Retail Addis Ababa" />    
         <link rel="canonical" href="https://www.bazaar.com.et/" />
         <link rel="icon" href="/favicon.ico" />
-      </Head>
+        </Head>*/}
+      <DefaultSeo
+        title="Buy Plastic Products Online | Top Plastic Store in Addis Ababa, Ethiopia"
+        description="Ethiopia's top online store for affordable plastic products. Shop for plastic chairs, tables, kitchenware, dustbins, crates, boxes, shelves, baskets, and more. Enjoy quick delivery in Addis Ababa and save time and money."
+        canonical="https://www.bazaar.com.et/"
+        openGraph={{
+          url: 'https://www.bazaar.com.et/',
+          title: 'Buy Plastic Products Online | Top Plastic Store in Addis Ababa, Ethiopia',
+          description: "Ethiopia's top online store for affordable plastic products. Shop for plastic chairs, tables, kitchenware, dustbins, crates, boxes, shelves, baskets, and more. Enjoy quick delivery in Addis Ababa and save time and money.",
+          images: imageUrls.map((url) => ({ url })),
+          site_name: 'Bazaar.com',
+         }}
+         additionalLinkTags={[
+          {
+            rel: 'icon',
+            href: '/favicon.ico'
+          }
+        ]}
+      />
+      <JsonLd
+        itemScope
+        itemType="http://schema.org/WebPage"
+        itemProp="mainEntity"
+        itemID="https://www.bazaar.com.et/"
+        url="https://www.bazaar.com.et/"
+      />
       <Carousel showThumbs={false} autoPlay>
         {imageUrls.map((url, index) => (
         <div key={index}>
