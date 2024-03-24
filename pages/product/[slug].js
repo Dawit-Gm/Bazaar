@@ -71,7 +71,8 @@ export default function ProductScreen(props) {
         additionalMetaTags={[
           {
              name: 'keywords',
-             content: product.tags.join(', '),
+             content: product?.tags ? product.tags.join(', ') : '',
+             //content: product.tags.join(', '),
               },
              ]}
           />

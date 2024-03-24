@@ -138,7 +138,8 @@ export default function Search(props) {
           additionalMetaTags={[
           {
             name: 'keywords',
-            content: categories.find(c => c.slug === category).keywords
+            content: categories.find(c => c.slug === category)?.keywords || '',
+            //content: categories.find(c => c.slug === category).keywords
            }
           ]}
         />
