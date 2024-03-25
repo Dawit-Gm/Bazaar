@@ -135,6 +135,13 @@ export default function Search(props) {
           title={category ? `Plastic ${category} in Ethiopia` : 'Plastic Products in Ethiopia'}
           description={`Explore top-quality ${category} at Ethiopia's leading online store. Shop affordable items for home and office. Enjoy doorstep delivery and hassle-free online shopping.`}
           canonical={`https://www.bazaar.com.et/search?category=${category}`}
+          openGraph={{
+            url: `https://www.bazaar.com.et/search?category=${category}`,
+            title: category ? `Plastic ${category} in Ethiopia` : 'Plastic Products in Ethiopia',
+            description: `Explore top-quality ${category} at Ethiopia's leading online store. Shop affordable items for home and office. Enjoy doorstep delivery and hassle-free online shopping.`,
+            site_name: 'Bazaar.com',
+           }}
+        
           additionalMetaTags={[
           {
             name: 'keywords',
@@ -148,7 +155,7 @@ export default function Search(props) {
         itemType="http://schema.org/WebPage"
         itemProp="mainEntity"
         itemID="https://www.bazaar.com.et/"
-        url="https://bazaar.com.et/search?category=${category}"
+        url={`https://www.bazaar.com.et/search?category=${category}`}
       />
        <div className="grid md:grid-cols-4 md:gap-5">
         <div>

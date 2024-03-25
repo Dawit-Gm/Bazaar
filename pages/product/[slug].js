@@ -59,12 +59,12 @@ export default function ProductScreen(props) {
         />
       </Head>*/}
      <DefaultSeo
-        title={`Plastic ${product.name} in Ethiopia`}
+        title={product ? `Plastic ${product.name} in Ethiopia`: 'Plastic Products in Ethiopia'}
         description={product.description}
         canonical={`https://www.bazaar.com.et/products/${product.slug}`}
         openGraph={{
            url: `https://www.bazaar.com.et/products/${product.slug}`,
-           title: `Plastic ${product.name} in Ethiopia`,
+           title: product ? `Plastic ${product.name} in Ethiopia` : 'Plastic Products in Ethiopia',
            description: product.description,
            site_name: 'Bazaar.com',
           }}
@@ -81,7 +81,7 @@ export default function ProductScreen(props) {
               itemType="http://schema.org/WebPage"
               itemProp="mainEntity"
               itemID="https://www.bazaar.com.et/"
-              url="https://www.bazaar.com.et/products/${product.slug}"
+              url={`https://www.bazaar.com.et/products/${product.slug}`}
           />
       <div className="mt-0 mb-3">
         <Link href="/">Back to Products</Link>
