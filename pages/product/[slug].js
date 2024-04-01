@@ -49,22 +49,13 @@ export default function ProductScreen(props) {
        
   return (
     <Layout title={product.name}>
-      {/*<Head>
-        <title>Plastic {product.name} in Ethiopia</title>
-        <meta name="description" content={product.description} /> 
-        <meta name="keywords" content={product.tags.join(', ')} />
-        <link
-          rel="canonical"  
-          href={`https://www.bazaar.com.et/products/${product.slug}`}
-        />
-      </Head>*/}
-     <DefaultSeo
-        title={product ? `Plastic ${product.name} in Ethiopia`: 'Plastic Products in Ethiopia'}
+      <DefaultSeo
+        title={product ? `Bazaar.com. Plastic ${product.name} in Ethiopia`: 'Plastic Products in Ethiopia'}
         description={product.description}
         canonical={`https://www.bazaar.com.et/products/${product.slug}`}
         openGraph={{
            url: `https://www.bazaar.com.et/products/${product.slug}`,
-           title: product ? `Plastic ${product.name} in Ethiopia` : 'Plastic Products in Ethiopia',
+           title: product ? `Bazaar.com. Plastic ${product.name} in Ethiopia` : 'Plastic Products in Ethiopia',
            description: product.description,
            site_name: 'Bazaar.com',
           }}
@@ -101,6 +92,7 @@ export default function ProductScreen(props) {
        <Image
         key={index}
         src={img}
+        alt={product.name}
         width={90}
         height={90} 
         sizes="100vw"

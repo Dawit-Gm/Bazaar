@@ -12,6 +12,7 @@ import '@fortawesome/fontawesome-free/css/all.css';
 import { BsCart4 } from 'react-icons/bs';
 import { Bars3Icon } from '@heroicons/react/24/solid';
 import { BsX } from 'react-icons/bs';
+import Image from 'next/image';
 
 export default function Layout({children}) {
   const { data: session } = useSession();
@@ -76,14 +77,12 @@ export default function Layout({children}) {
    
   return (
     <>
-
       <ToastContainer position="bottom-center" limit={1} />
-
       <div className="flex  min-h-screen flex-col justify-between">
       <header className="header">
        <nav className="flex flex-col md:flex-row h-24 shadow-md">
        <div className="flex">
-         <Link href="/" className="logo">
+       {/* <Link href="/" className="logo">
          <img
           className="hidden md:flex items-left px-4 py-4" 
           src="https://res.cloudinary.com/dxxzqmxu5/image/upload/v1693992337/Bazaar.png"
@@ -91,8 +90,17 @@ export default function Layout({children}) {
           width={230}
           height={210}
          />
-         </Link>
-                
+        </Link>*/}
+        <Link href="/" className="logo">
+          <Image
+             className="hidden md:flex items-left px-4 py-4" 
+             src="https://res.cloudinary.com/dxxzqmxu5/image/upload/v1693992337/Bazaar.png"
+             alt="Logo"
+             width={230}
+             height={210}
+          />
+        </Link>
+           
        <div className="flex md:hidden">
          <div className="relative">
           <Bars3Icon 
@@ -127,7 +135,7 @@ export default function Layout({children}) {
            </div>
             )}       
           </div> 
-         <Link href="/" className="logo">
+         {/*<Link href="/" className="logo">
          <img
           className="mt-1.5 ml-2" 
           src="https://res.cloudinary.com/dxxzqmxu5/image/upload/v1693992337/Bazaar.png"
@@ -135,6 +143,15 @@ export default function Layout({children}) {
           width={150}
           height={125}
          />
+         </Link>*/}
+         <Link href="/" className="logo">
+           <Image
+             className="mt-1.5 ml-2" 
+             src="https://res.cloudinary.com/dxxzqmxu5/image/upload/v1693992337/Bazaar.png"
+             alt="Logo"
+             width={150}
+             height={125}
+           />
          </Link>
        </div>  
       <div className="flex md:hidden items-center flex-1 justify-end py-2.5"> 
