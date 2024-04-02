@@ -44,13 +44,13 @@ export default function Home({ products }) {
   return (
     <Layout>
       <DefaultSeo
-        title="Bazaar.com. Buy Plastic Products Online | Top Plastic Store in Addis Ababa, Ethiopia"
-        description="Ethiopia's top online store for affordable plastic products. Shop for plastic chairs, tables, kitchenware, dustbins, crates, boxes, shelves, baskets, and more. Enjoy quick delivery in Addis Ababa and save time and money."
+        title="Buy Plastic Products Online in Addis Ababa, Ethiopia"
+        description="Shop affordable plastic products at Ethiopia’s top online store, Bazaar.com. Find chairs, tables, kitchenwares, and more. Enjoy quick delivery in Addis Ababa and save time and money."
         canonical="https://www.bazaar.com.et/"
         openGraph={{
           url: 'https://www.bazaar.com.et/',
-          title: 'Bazaar.com. Buy Plastic Products Online | Top Plastic Store in Addis Ababa, Ethiopia',
-          description: "Ethiopia's top online store for affordable plastic products. Shop for plastic chairs, tables, kitchenware, dustbins, crates, boxes, shelves, baskets, and more. Enjoy quick delivery in Addis Ababa and save time and money.",
+          title: 'Buy Plastic Products Online in Addis Ababa, Ethiopia',
+          description: "Shop affordable plastic products at Ethiopia’s top online store, Bazaar.com. Find chairs, tables, kitchenwares, and more. Enjoy quick delivery in Addis Ababa and save time and money.",
           images: imageUrls.map((url) => ({ url })),
           site_name: 'Bazaar.com',
          }}
@@ -68,21 +68,13 @@ export default function Home({ products }) {
         itemID="https://www.bazaar.com.et/"
         url="https://www.bazaar.com.et/"
       />
-    {/*<Carousel showThumbs={false} autoPlay>
-        {imageUrls.map((url, index) => (
-        <div key={index}>
-        <img src={url} alt={`Image ${index + 1}`} />
-        </div>
-        ))}
-      </Carousel> */}  
-
-    <Carousel showThumbs={false} autoPlay>
+      <Carousel showThumbs={false} autoPlay>
         {imageUrls.map((url, index) => (
         <div key={index}>
          <Image src={url} alt={`Image ${index + 1}`} width={450} height={130} />
         </div>
          ))}
-       </Carousel>
+      </Carousel>
   
       <GridLayout className="grid grid-cols-1 xxs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
         {products.map((product) => (
