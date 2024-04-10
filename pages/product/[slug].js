@@ -50,12 +50,12 @@ export default function ProductScreen(props) {
   return (
     <Layout title={product.name}>
       <DefaultSeo
-        title={product ? `Plastic ${product.name} in Ethiopia`: 'Plastic Products in Ethiopia'}
+        title={product ? `${product.name} in Ethiopia`: 'Plastic Products in Ethiopia'}
         description={product.description}
         canonical={`https://www.bazaar.com.et/products/${product.slug}`}
         openGraph={{
            url: `https://www.bazaar.com.et/products/${product.slug}`,
-           title: product ? `Plastic ${product.name} in Ethiopia` : 'Plastic Products in Ethiopia',
+           title: product ? `${product.name} in Ethiopia` : 'Plastic Products in Ethiopia',
            description: product.description,
            site_name: 'Bazaar.com',
           }}
