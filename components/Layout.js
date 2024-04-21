@@ -82,15 +82,6 @@ export default function Layout({children}) {
       <header className="header">
        <nav className="flex flex-col md:flex-row h-24 shadow-md">
        <div className="flex">
-       {/* <Link href="/" className="logo">
-         <img
-          className="hidden md:flex items-left px-4 py-4" 
-          src="https://res.cloudinary.com/dxxzqmxu5/image/upload/v1693992337/Bazaar.png"
-          alt="Logo"
-          width={230}
-          height={210}
-         />
-        </Link>*/}
         <Link href="/" className="logo">
           <Image
              className="hidden md:flex items-left px-4 py-4" 
@@ -135,15 +126,6 @@ export default function Layout({children}) {
            </div>
             )}       
           </div> 
-         {/*<Link href="/" className="logo">
-         <img
-          className="mt-1.5 ml-2" 
-          src="https://res.cloudinary.com/dxxzqmxu5/image/upload/v1693992337/Bazaar.png"
-          alt="Logo"
-          width={150}
-          height={125}
-         />
-         </Link>*/}
          <Link href="/" className="logo">
            <Image
              className="mt-1.5 ml-2" 
@@ -307,7 +289,7 @@ export default function Layout({children}) {
     style={{ marginLeft:'0px', marginRight:'0px', marginTop:'16px', width: '100%' }}>{children}
   </main>
  <footer className="footer flex h-10 mt-4 justify-center items-center shadow-inner">
-      <p>Copyright © 2023 Bazaar</p>
+      <p>Copyright © 2024 Bazaar.com</p>
   </footer>
       </div>
     </>

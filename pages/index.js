@@ -39,8 +39,7 @@ export default function Home({ products }) {
     toast.success('Product added to the cart');
   };
 
-    const imageUrls = ['https://res.cloudinary.com/dxxzqmxu5/image/upload/v1689594094/banner2_dvibxa.jpg', 
-                      'https://res.cloudinary.com/dxxzqmxu5/image/upload/v1689594059/banner1_tsl0jc.jpg'];
+    const imageUrls = ['https://res.cloudinary.com/dxxzqmxu5/image/upload/v1712925659/Untitled_c82fz5.jpg'];
   return (
     <Layout>
       <DefaultSeo
