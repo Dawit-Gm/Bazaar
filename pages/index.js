@@ -40,7 +40,8 @@ export default function Home({ products }) {
   };
 
     const imageUrls = ['https://res.cloudinary.com/dxxzqmxu5/image/upload/v1713883150/Bazaar.com_vlsdx2.png',
-                       'https://res.cloudinary.com/dxxzqmxu5/image/upload/t_plastic products/v1713881113/plastcs1_t7t5zs.jpg'];
+                       'https://res.cloudinary.com/dxxzqmxu5/image/upload/t_plastic products/v1713886130/plastcs1_cwmtvd.jpg',
+                       'https://res.cloudinary.com/dxxzqmxu5/image/upload/t_plastic products/v1713885892/plastic_product_yex1nz.jpg'];
   return (
     <Layout>
       <DefaultSeo
