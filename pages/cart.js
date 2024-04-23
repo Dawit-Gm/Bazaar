@@ -104,10 +104,10 @@ function CartScreen() {
                 </div>
               </li>
               <div style={{display: 'flex', justifyContent: 'center'}}>
-              <a href="tel:251977757992" className="primary-button">
+              <a href="tel:0977757992" className="primary-button">
                 <span style={{display: 'flex', alignItems: 'center',}}>
                 <BsPhoneVibrate size={28} />
-                <span style={{marginLeft: '10px'}}>251977757992</span> 
+                <span style={{marginLeft: '10px'}}>0977757992</span> 
                 </span>
               </a>
               </div>  
