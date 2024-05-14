@@ -17,7 +17,7 @@ import Image from 'next/image';
         sizes="100vw"
         style={{
           width: '100%',
-          height: '78%',
+          height: '75%',
         }}
       ></Image>
       </Link>
