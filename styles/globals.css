@@ -172,10 +172,6 @@ a:hover {
   background-color: #3F8C26; /* Darker amber */ 
 }
 
-.contact {
-  color: #66BF4C;
-  cursor: pointer;
-  }
 
 .contact:hover {
   color: #008000; /* Lighter amber */
@@ -201,6 +197,39 @@ a:hover {
   background-color: #f1f5f9;
 }
 
+@media (max-width: 768px) { /* Adjust breakpoint as needed */
+  .about {
+    margin-left: 60px; /* Smaller margin for smaller screens */
+    margin-right: 60px;
+  }
+}
+
+@media (max-width: 480px) { /* Smaller breakpoint for even smaller screens */
+  .about {
+    margin-left: 40px; /* Even smaller margin for very small screens */
+    margin-right: 40px;
+  }
+}
+/* Base Styles */
+.services-content {
+  margin-left: 80px;
+  margin-right: 80px;
+}
+
+/* Responsive Styles for Smaller Screens */
+@media (max-width: 768px) { /* Adjust the breakpoint as needed */
+  .services-content {
+    margin-left: 60px; /* Smaller margin on smaller screens */
+    margin-right: 60px;
+  }
+}
+
+@media (max-width: 480px) { /* Even smaller screens */
+  .services-content {
+    margin-left: 40px; /* Even smaller margin */
+    margin-right: 40px;
+  }
+}
 .footer{
   display: flex; 
   height: 3rem;

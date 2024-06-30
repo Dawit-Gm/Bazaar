@@ -38,7 +38,8 @@ export default function Layout({children}) {
   const [open, setOpen] = useState(false);
   const [userMenuOpen, setUserMenuOpen] = useState(false);
   const Menu = [{label: 'Home', href: '/'},
-  {label: 'Categories', href: '/search'},
+  {label: 'Products', href: '/search'},
+  {label: 'Services', href: '/services'},
   {label: 'About', href: '/about'},
   {label: 'Contact', href: '/contact'}
   ];
@@ -273,8 +274,11 @@ export default function Layout({children}) {
             Home
           </Link>
           <Link href="/search" className="text-black hover:underline">
-            Categories
+            products
           </Link>
+          <Link href="/services" className="text-black hover:underline">
+            Services          
+            </Link>
           <Link href="/about" className="text-black hover:underline">
             About 
           </Link>
