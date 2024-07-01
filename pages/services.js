@@ -4,6 +4,30 @@ import { BsPhoneVibrate } from 'react-icons/bs';
 export default function ServicesPage() {
   return (
     <Layout>
+     <DefaultSeo
+       title="Passport & Visa Services in Addis Ababa, Ethiopia | Easy Travel Solutions"
+       description="Simplify your travel with our comprehensive passport and visa services in Addis Ababa, Ethiopia. We offer expert assistance, appointment booking, and documentation guidance. Get started today!"
+       canonical="https://www.bazaar.com.et/services/"
+       openGraph={{
+        url: "https://www.bazaar.com.et/services/", 
+        title: "Passport & Visa Services in Addis Ababa, Ethiopia | Easy Travel Solutions",
+        description: "Simplify your travel with our comprehensive passport and visa services in Addis Ababa, Ethiopia. We offer expert assistance, appointment booking, and documentation guidance. Get started today!",
+        site_name: "Bazaar.com",
+       }}
+       additionalMetaTags={[
+       {
+         name: "keywords",
+         content: "passport services, visa services, Addis Ababa, Ethiopia, travel documents, visa application, visa appointment booking, new passport, passport renewal",
+       },
+      ]}
+     />
+<JsonLd
+  itemScope
+  itemType="http://schema.org/WebPage"
+  itemProp="mainEntity"
+  itemID="https://www.bazaar.com.et/"
+  url="https://www.bazaar.com.et/services/"
+/>
       <div className="services">
         <h1 className="services text-center ml-8 mr-8">
           <b style={{ backgroundColor: '#B5E582' }}>ጉዞዎን ቀላል ያድርጉት፡ ፓስፖርት እና የቪዛ አገልግሎቶች ቀላል ተደርገዋል። Simplify Your Travel: Passport & Visa Services Made Easy</b>
@@ -53,9 +77,10 @@ export default function ServicesPage() {
             Ready to travel? Get started today!
           </p>
 
-          <div style={{ display: 'flex', alignItems: 'center' }}>
+          
             <span style={{ marginRight: '10px' }}>ከቤትዎ ሆነው በመደወል ይዘዙን / Call us and order from home:</span>
-            <a href="tel:0977757992" className="primary-button">
+           <div style={{ display: 'flex', alignItems: 'center' }}> 
+            <a href="tel:0977757992" className="primary-button" style={{ marginLeft: '70px' }}>
               <span style={{ display: 'flex', alignItems: 'center' }}>
                 <BsPhoneVibrate size={28} />
                 <span style={{ marginLeft: '10px' }}>0977757992</span>
