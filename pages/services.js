@@ -1,5 +1,7 @@
-import Layout from '../components/Layout'
+import Layout from '../components/Layout';
 import { BsPhoneVibrate } from 'react-icons/bs';
+import { JsonLd } from 'react-schemaorg';
+import { DefaultSeo } from 'next-seo';
 
 export default function ServicesPage() {
   return (
