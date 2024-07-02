@@ -40,9 +40,20 @@ export default function Home({ products }) {
   };
 
     const imageUrls = ['https://res.cloudinary.com/dxxzqmxu5/image/upload/v1713883150/Bazaar.com_vlsdx2.png',
-                       'https://res.cloudinary.com/dxxzqmxu5/image/upload/t_plastic products/v1713886130/plastcs1_cwmtvd.jpg',
-                       
-                       ];
+                       'https://res.cloudinary.com/dxxzqmxu5/image/upload/v1719910428/plastic_products_hdzp3p.jpg',
+                       'https://res.cloudinary.com/dxxzqmxu5/image/upload/v1719848190/addtext_com_MTEyODEzMjM5Mg_p1hxqr.png',
+                      ];
+                      const servicesPageUrl = 'https://www.bazaar.com.et/services';
+
+                      const imageData = imageUrls.map((imageUrl, index) => {
+                 return {
+                       imageUrl,
+                      link: index === 2 ? servicesPageUrl : null, // Add link for the third image
+                      alt: index === 2 ? 'Visa and Passport Services in Ethiopia' : `Image ${index + 1}`, // Add specific alt for the third image
+                    };
+                    });
+
+                      
   return (
     <Layout>
       <DefaultSeo
@@ -70,14 +81,26 @@ export default function Home({ products }) {
         itemID="https://www.bazaar.com.et/"
         url="https://www.bazaar.com.et/"
       />
-      <Carousel showThumbs={false} autoPlay>
+      {/*<Carousel showThumbs={false} autoPlay>
         {imageUrls.map((url, index) => (
         <div key={index}>
          <Image src={url} alt={`Image ${index + 1}`} width={450} height={130} />
         </div>
          ))}
+      </Carousel>*/}
+         <Carousel showThumbs={false} autoPlay infiniteLoop={true}>
+        {imageData.map((image, index) => (
+          <a href={image.link} target="_blank" rel="noopener noreferrer" key={index}>
+            <div>
+              <Image 
+                 src={image.imageUrl} 
+                 alt={image.alt} // Use the alt text from imageData
+                 width={450} 
+                 height={130} />
+            </div>
+          </a>
+        ))}
       </Carousel>
-  
       <GridLayout className="grid grid-cols-1 xxs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
         {products.map((product) => (
           <ProductItem
