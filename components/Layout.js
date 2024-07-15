@@ -39,7 +39,7 @@ export default function Layout({children}) {
   const [userMenuOpen, setUserMenuOpen] = useState(false);
   const Menu = [{label: 'Home', href: '/'},
   {label: 'Products', href: '/search'},
-  {label: 'Services', href: '/services'},
+  {label: 'Service', href: '/service'},
   {label: 'About', href: '/about'},
   {label: 'Contact', href: '/contact'}
   ];
@@ -277,7 +277,7 @@ export default function Layout({children}) {
             products
           </Link>
           <Link href="/services" className="text-black hover:underline">
-            Services          
+            Service          
             </Link>
           <Link href="/about" className="text-black hover:underline">
             About 

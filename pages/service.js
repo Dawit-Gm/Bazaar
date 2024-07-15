@@ -3,7 +3,7 @@ import { BsPhoneVibrate } from 'react-icons/bs';
 import { JsonLd } from 'react-schemaorg';
 import { DefaultSeo } from 'next-seo';
 
-export default function ServicesPage() {
+export default function ServicePage() {
   return (
     <Layout>
      <DefaultSeo
