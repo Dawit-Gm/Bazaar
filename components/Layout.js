@@ -274,9 +274,9 @@ export default function Layout({children}) {
             Home
           </Link>
           <Link href="/search" className="text-black hover:underline">
-            products
+            Products
           </Link>
-          <Link href="/services" className="text-black hover:underline">
+          <Link href="/service" className="text-black hover:underline">
             Service          
             </Link>
           <Link href="/about" className="text-black hover:underline">

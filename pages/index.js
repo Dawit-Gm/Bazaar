@@ -43,7 +43,7 @@ export default function Home({ products }) {
                        'https://res.cloudinary.com/dxxzqmxu5/image/upload/v1719910428/plastic_products_hdzp3p.jpg',
                        'https://res.cloudinary.com/dxxzqmxu5/image/upload/v1719848190/addtext_com_MTEyODEzMjM5Mg_p1hxqr.png',
                       ];
-                      const servicesPageUrl = 'https://www.bazaar.com.et/services';
+                      const servicesPageUrl = 'https://www.bazaar.com.et/service';
 
                       const imageData = imageUrls.map((imageUrl, index) => {
                  return {
