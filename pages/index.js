@@ -39,7 +39,7 @@ export default function Home({ products }) {
     toast.success('Product added to the cart');
   };
 
-    const imageUrls = ['https://res.cloudinary.com/dxxzqmxu5/image/upload/v1721118323/%E1%89%A3%E1%8B%9B%E1%88%AD_Bazaar.com_1_tsvkk6.png',
+    const imageUrls = ['https://res.cloudinary.com/dxxzqmxu5/image/upload/v1721127128/%E1%89%A3%E1%8B%9B%E1%88%AD_Bazaar.com_3_rc7uba.png',
                        'https://res.cloudinary.com/dxxzqmxu5/image/upload/v1719910428/plastic_products_hdzp3p.jpg',
                        'https://res.cloudinary.com/dxxzqmxu5/image/upload/v1719848190/addtext_com_MTEyODEzMjM5Mg_p1hxqr.png',
                       ];
@@ -81,15 +81,13 @@ export default function Home({ products }) {
         itemID="https://www.bazaar.com.et/"
         url="https://www.bazaar.com.et/"
       />
-      {/*<Carousel showThumbs={false} autoPlay>
-        {imageUrls.map((url, index) => (
-        <div key={index}>
-         <Image src={url} alt={`Image ${index + 1}`} width={450} height={130} />
-        </div>
-         ))}
-      </Carousel>*/}
-         <Carousel showThumbs={false} autoPlay infiniteLoop={true}>
-        {imageData.map((image, index) => (
+      <Carousel 
+         showThumbs={false} 
+         autoPlay 
+         infiniteLoop={true} 
+         interval={10000}
+         >       
+       {imageData.map((image, index) => (
           <a href={image.link} target="_blank" rel="noopener noreferrer" key={index}>
             <div>
               <Image 
