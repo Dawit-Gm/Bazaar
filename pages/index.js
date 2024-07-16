@@ -39,7 +39,7 @@ export default function Home({ products }) {
     toast.success('Product added to the cart');
   };
 
-    const imageUrls = ['https://res.cloudinary.com/dxxzqmxu5/image/upload/v1713883150/Bazaar.com_vlsdx2.png',
+    const imageUrls = ['https://res.cloudinary.com/dxxzqmxu5/image/upload/v1721118323/%E1%89%A3%E1%8B%9B%E1%88%AD_Bazaar.com_1_tsvkk6.png',
                        'https://res.cloudinary.com/dxxzqmxu5/image/upload/v1719910428/plastic_products_hdzp3p.jpg',
                        'https://res.cloudinary.com/dxxzqmxu5/image/upload/v1719848190/addtext_com_MTEyODEzMjM5Mg_p1hxqr.png',
                       ];
