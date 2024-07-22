@@ -196,7 +196,12 @@ a:hover {
 .default-button:hover {
   background-color: #f1f5f9;
 }
-
+.factory-price-label {
+  display: block;
+  margin-top: 0px;
+  font-size: 0.8em; /* Reduced from 0.9em */
+  color: #4a4a4a;
+}
 @media (max-width: 768px) { /* Adjust breakpoint as needed */
   .about {
     margin-left: 60px; /* Smaller margin for smaller screens */

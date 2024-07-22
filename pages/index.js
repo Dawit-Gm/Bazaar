@@ -57,13 +57,13 @@ export default function Home({ products }) {
   return (
     <Layout>
       <DefaultSeo
-        title="Buy Plastic Products Online in Addis Ababa, Ethiopia"
-        description="Shop affordable plastic products at Ethiopia’s top online store, Bazaar.com. Find chairs, tables, kitchenwares, and more. Enjoy quick delivery in Addis Ababa and save time and money."
+        title="Buy Plastic Products Online With a Factory Price Option in Addis Ababa, Ethiopia"
+        description="Shop affordable plastic products With a Factory Price Option at Ethiopia’s top online store, Bazaar.com. Find chairs, tables, kitchenwares, and more. Enjoy quick delivery in Addis Ababa and save time and money."
         canonical="https://www.bazaar.com.et/"
         openGraph={{
           url: 'https://www.bazaar.com.et/',
-          title: 'Buy Plastic Products Online in Addis Ababa, Ethiopia',
-          description: "Shop affordable plastic products at Ethiopia’s top online store, Bazaar.com. Find chairs, tables, kitchenwares, and more. Enjoy quick delivery in Addis Ababa and save time and money.",
+          title: 'Buy Plastic Products Online With a Factory Price Option in Addis Ababa, Ethiopia',
+          description: "Shop affordable plastic products With a Factory Price Option at Ethiopia’s top online store, Bazaar.com. Find chairs, tables, kitchenwares, and more. Enjoy quick delivery in Addis Ababa and save time and money.",
           images: imageUrls.map((url) => ({ url })),
           site_name: 'Bazaar.com',
          }}

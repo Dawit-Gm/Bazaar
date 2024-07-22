@@ -26,16 +26,16 @@ import Image from 'next/image';
         <p className="text-md text-left cardname"> 
          {product.name}</p>
          </Link> 
-         <p className="text-left price">ETB&nbsp;&nbsp;{product.price}&nbsp;&nbsp; 
-         <span
+         <p className="text-left price">
+            ETB&nbsp;&nbsp;{product.price}&nbsp;&nbsp; 
+          <span
             className="add-cart"
             onClick={() => {
-              addToCartHandler(product);
-            }}
-             >
-            Add to cart
-           </span></p>
-            
+            addToCartHandler(product);
+           }}
+          >
+               Add to cart
+          </span></p>
       </div>
     </div>
   );
