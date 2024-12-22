@@ -59,13 +59,13 @@ export default function Home({ products }) {
       <DefaultSeo
         title="Buy Plastic Products Online With a Factory Price Option in Addis Ababa, Ethiopia"
         description="Shop affordable plastic products With a Factory Price Option at Ethiopia’s top online store, Bazaar.com. Find chairs, tables, kitchenwares, and more. Enjoy quick delivery in Addis Ababa and save time and money."
-        canonical="https://www.bazaar.com.et/"
+        canonical="https://bazaar-et.vercel.app/"
         openGraph={{
-          url: 'https://www.bazaar.com.et/',
+          url: 'https://bazaar-et.vercel.app/',
           title: 'Buy Plastic Products Online With a Factory Price Option in Addis Ababa, Ethiopia',
           description: "Shop affordable plastic products With a Factory Price Option at Ethiopia’s top online store, Bazaar.com. Find chairs, tables, kitchenwares, and more. Enjoy quick delivery in Addis Ababa and save time and money.",
           images: imageUrls.map((url) => ({ url })),
-          site_name: 'Bazaar.com',
+          site_name: 'Bazaar',
          }}
          additionalLinkTags={[
           {
@@ -78,8 +78,8 @@ export default function Home({ products }) {
         itemScope
         itemType="http://schema.org/WebPage"
         itemProp="mainEntity"
-        itemID="https://www.bazaar.com.et/"
-        url="https://www.bazaar.com.et/"
+        itemID="https://bazaar-et.vercel.app/"
+        url="https://bazaar-et.vercel.app/"
       />
       <Carousel 
          showThumbs={false} 
