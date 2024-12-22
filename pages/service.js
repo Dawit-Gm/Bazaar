@@ -9,12 +9,12 @@ export default function ServicePage() {
      <DefaultSeo
        title="Passport & Visa Services in Addis Ababa, Ethiopia | Easy Travel Solutions"
        description="Simplify your travel with our comprehensive passport and visa services in Addis Ababa, Ethiopia. We offer expert assistance, appointment booking, and documentation guidance. Get started today!"
-       canonical="https://www.bazaar.com.et/services/"
+       canonical="https://bazaar-et.vercel.app/services/"
        openGraph={{
-        url: "https://www.bazaar.com.et/services/", 
+        url: "https://bazaar-et.vercel.app/services/", 
         title: "Passport & Visa Services in Addis Ababa, Ethiopia | Easy Travel Solutions",
         description: "Simplify your travel with our comprehensive passport and visa services in Addis Ababa, Ethiopia. We offer expert assistance, appointment booking, and documentation guidance. Get started today!",
-        site_name: "Bazaar.com",
+        site_name: "Bazaar",
        }}
        additionalMetaTags={[
        {
@@ -27,8 +27,8 @@ export default function ServicePage() {
   itemScope
   itemType="http://schema.org/WebPage"
   itemProp="mainEntity"
-  itemID="https://www.bazaar.com.et/"
-  url="https://www.bazaar.com.et/services/"
+  itemID="https://bazaar-et.vercel.app/"
+  url="https://bazaar-et.vercel.app/services/"
 />
       <div className="services">
         <h1 className="services text-center ml-8 mr-8">
