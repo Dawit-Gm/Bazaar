@@ -52,12 +52,12 @@ export default function ProductScreen(props) {
       <DefaultSeo
         title={product ? `${product.name} in Ethiopia`: 'Plastic Products in Ethiopia'}
         description={product.description}
-        canonical={`https://www.bazaar.com.et/products/${product.slug}`}
+        canonical={`https://bazaar-et.vercel.app/products/${product.slug}`}
         openGraph={{
-           url: `https://www.bazaar.com.et/products/${product.slug}`,
+           url: `https://bazaar-et.vercel.app/products/${product.slug}`,
            title: product ? `${product.name} in Ethiopia` : 'Plastic Products in Ethiopia',
            description: product.description,
-           site_name: 'Bazaar.com',
+           site_name: 'Bazaar',
           }}
         additionalMetaTags={[
           {
@@ -70,8 +70,8 @@ export default function ProductScreen(props) {
               itemScope
               itemType="http://schema.org/WebPage"
               itemProp="mainEntity"
-              itemID="https://www.bazaar.com.et/"
-              url={`https://www.bazaar.com.et/products/${product.slug}`}
+              itemID="https://bazaar-et.vercel.app/"
+              url={`https://bazaar-et.vercel.app/products/${product.slug}`}
           />
       <div className="mt-0 mb-3">
         <Link href="/">Back to Products</Link>
