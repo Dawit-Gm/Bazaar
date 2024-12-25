@@ -6,88 +6,88 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" 
         xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
-    <loc>https://bazaar.com.et</loc>
+    <loc>https://bazaar-et.vercel.app</loc>
     <lastmod>2024-02-23T17:09:30.674Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://bazaar.com.et/about</loc>
+    <loc>https://bazaar-et.vercel.app/about</loc>
     <lastmod>2024-02-23T17:09:30.674Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://bazaar.com.et/contact</loc>
+    <loc>https://bazaar-et.vercel.app/contact</loc>
     <lastmod>2024-02-23T17:09:30.674Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://bazaar.com.et/login</loc>
+    <loc>https://bazaar-et.vercel.app/login</loc>
     <lastmod>2024-02-23T17:09:30.674Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://bazaar.com.et/profile</loc>
+    <loc>https://bazaar-vercel.app/profile</loc>
     <lastmod>2024-02-23T17:09:30.674Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://bazaar.com.et/register</loc>
+    <loc>https://bazaar-et.vercel.app/register</loc>
     <lastmod>2024-02-23T17:09:30.674Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://bazaar.com.et/search</loc>
+    <loc>https://bazaar-et.vercel.app/search</loc>
     <lastmod>2024-02-23T17:09:30.674Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://bazaar.com.et/search?category=Baskets</loc>
+    <loc>https://bazaar-et.vercel.app/search?category=Baskets</loc>
   </url>
   <url>
-    <loc>https://bazaar.com.et/search?category=Boxes</loc>
+    <loc>https://bazaar-et.vercel.app/search?category=Boxes</loc>
   </url>
   <url>
-    <loc>https://bazaar.com.et/search?category=Buckets</loc>
+    <loc>https://bazaar-et.vercel.app/search?category=Buckets</loc>
   </url>
   <url>
-    <loc>https://bazaar.com.et/search?category=Chairs</loc>
+    <loc>https://bazaar-et.vercel.app/search?category=Chairs</loc>
   </url>
   <url>
-    <loc>https://bazaar.com.et/search?category=Chocho</loc>
+    <loc>https://bazaar-et.vercel.app/search?category=Chocho</loc>
   </url>
   <url>
-    <loc>https://bazaar.com.et/search?category=Dish+Drying+Racks</loc>
+    <loc>https://bazaar-et.vercel.app/search?category=Dish+Drying+Racks</loc>
   </url>
   <url>
-    <loc>https://bazaar.com.et/search?category=Dustbins</loc>
+    <loc>https://bazaar-et.vercel.app/search?category=Dustbins</loc>
   </url>
   <url>
-    <loc>https://bazaar.com.et/search?category=Flower+Pot</loc>
+    <loc>https://bazaar-et.vercel.app/search?category=Flower+Pot</loc>
   </url>
   <url>
-    <loc>https://bazaar.com.et/search?category=Foot+Mask</loc>
+    <loc>https://bazaar-et.vercel.app/search?category=Foot+Mask</loc>
   </url>
   <url>
-    <loc>https://bazaar.com.et/search?category=Hair+Gel</loc>
+    <loc>https://bazaar-et.vercel.app/search?category=Hair+Gel</loc>
   </url>
   <url>
-    <loc>https://bazaar.com.et/search?category=Hair+Oil</loc>
+    <loc>https://bazaar-et.vercel.app/search?category=Hair+Oil</loc>
   </url>
   <url>
-    <loc>https://bazaar.com.et/search?category=Shelfs</loc>
+    <loc>https://bazaar-et.vercel.app/search?category=Shelfs</loc>
   </url>
   <url>
-    <loc>https://bazaar.com.et/search?category=Tables</loc>
+    <loc>https://bazaar-et.vercel.app/search?category=Tables</loc>
   </url>
   <url>
-    <loc>https://bazaar.com.et/service</loc>
+    <loc>https://bazaar-et.vercel.app/service</loc>
     <lastmod>2024-02-23T17:09:30.674Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
