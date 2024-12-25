@@ -22,6 +22,12 @@ export default function ServicePage() {
          content: "passport services, visa services, Addis Ababa, Ethiopia, travel documents, visa application, visa appointment booking, new passport, passport renewal",
        },
       ]}
+         additionalMetaTags={[
+         {
+           name: 'google-site-verification',
+           content: 'LQcA8czKq5n5r2DX8Guc5WMUllIzRZQU3q2JA3ywvII' 
+          },
+        ]}  
      />
 <JsonLd
   itemScope
