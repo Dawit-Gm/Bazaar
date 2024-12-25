@@ -128,6 +128,12 @@ export default function Search(props) {
             //content: categories.find(c => c.slug === category).keywords
            }
           ]}
+            additionalMetaTags={[
+         {
+           name: 'google-site-verification',
+           content: 'LQcA8czKq5n5r2DX8Guc5WMUllIzRZQU3q2JA3ywvII' 
+          },
+        ]}  
         />
       <JsonLd
         itemScope
