@@ -77,12 +77,21 @@
   <url>
     <loc>https://bazaar-et.vercel.app/search?category=Hair+Gel</loc>
   </url>
+   <url>   
+      <loc>https://bazaar-et.vercel.app/search?category=Hair+Growth</loc>
+   </url> 
   <url>
     <loc>https://bazaar-et.vercel.app/search?category=Hair+Oil</loc>
   </url>
   <url>
-    <loc>https://bazaar-et.vercel.app/search?category=Shelfs</loc>
+    <loc>https://bazaar-et.vercel.app/search?category=Perfume</loc>
   </url>
+  <url>
+    <loc>https://bazaar-et.vercel.app/search?category=Shelfs</loc>
+  </url> 
+  <url>
+    <loc>https://bazaar-et.vercel.app/search?category=Shoes</loc>
+  </url>   
   <url>
     <loc>https://bazaar-et.vercel.app/search?category=Tables</loc>
   </url>
