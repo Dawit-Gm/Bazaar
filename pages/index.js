@@ -72,8 +72,6 @@ export default function Home({ products }) {
             rel: 'icon',
             href: '/favicon.ico'
           },
-        ]} 
-         additionalMetaTags={[
          {
            name: 'google-site-verification',
            content: 'LQcA8czKq5n5r2DX8Guc5WMUllIzRZQU3q2JA3ywvII' 
