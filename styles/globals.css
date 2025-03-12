@@ -86,7 +86,7 @@ textarea:focus {
  @media (max-width: 767px) {
   
   input {
-   width: 60vw;
+   width: 50vw;
    height: 38px;
    }
    .btn{
@@ -96,9 +96,9 @@ textarea:focus {
  
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1400px) {
+@media only screen and (min-width: 768px) and (max-width: 99999px) {
   input {
-    width: 45vw;
+    width: 30vw;
     height: 45px;
   }
   .btn{

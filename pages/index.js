@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { useContext } from 'react';
+import { useContext, useState, useEffect } from 'react';
 import { toast } from 'react-toastify';
 import Layout from '../components/Layout';
 import ProductItem from '../components/ProductItem';
@@ -18,6 +18,21 @@ import Image from 'next/image';
 export default function Home({ products }) {
   const { state, dispatch } = useContext(Store);
   const { cart } = state;
+  const [containerWidth, setContainerWidth] = useState(0);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setContainerWidth(document.getElementById('grid-container').offsetWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+    handleResize(); // Set the initial value
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
 
   const addToCartHandler = async (product) => {
     const existItem = cart.cartItems.find((x) => x.slug === product.slug);
@@ -105,17 +120,19 @@ export default function Home({ products }) {
           </a>
         ))}
       </Carousel>
-      <GridLayout className="grid grid-cols-1 xxs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
-        {products.map((product) => (
-          <ProductItem
-            product={product}
-            key={product.slug}
-            addToCartHandler={
-              addToCartHandler
-            }
-          ></ProductItem>
-        ))}
-      </GridLayout>
+     <div id="grid-container">
+        {containerWidth > 0 && (
+          <GridLayout containerWidth={containerWidth} className="grid grid-cols-1 xxs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+            {products.map((product) => (
+              <ProductItem
+                product={product}
+                key={product.slug}
+                addToCartHandler={addToCartHandler}
+              ></ProductItem>
+            ))}
+          </GridLayout>
+        )}
+      </div>
     </Layout>
   );
 }
