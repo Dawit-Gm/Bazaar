@@ -30,7 +30,7 @@ const splitBilingualName = (name) => {
         sizes="100vw"
         style={{
           width: '100%',
-          height: '73%',
+          height: '65%',
         }}
       ></Image>
       </Link>
@@ -65,8 +65,10 @@ const splitBilingualName = (name) => {
           )}
         </div>
          </Link> 
-         <p className="text-left price">
+         <p className="price">
             ETB&nbsp;&nbsp;{product.price}&nbsp;&nbsp; 
+         </p>
+         <p>
           <span
             className="add-cart"
             onClick={() => {

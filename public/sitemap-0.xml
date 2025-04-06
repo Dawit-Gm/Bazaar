@@ -77,9 +77,9 @@
   <url>
     <loc>https://bazaar-et.vercel.app/search?category=Hair+Gel</loc>
   </url>
-   <url>   
-      <loc>https://bazaar-et.vercel.app/search?category=Hair+Growth</loc>
-   </url> 
+  <url>   
+    <loc>https://bazaar-et.vercel.app/search?category=Hair+Growth</loc>
+  </url> 
   <url>
     <loc>https://bazaar-et.vercel.app/search?category=Hair+Oil</loc>
   </url>
@@ -102,7 +102,7 @@
     <priority>0.7</priority>
   </url> 
  <url>
-   <urlloc>https://bazaar-et.vercel.app/product/Pyramid%20Kids%20Plastic%20Armchair</loc>
+   <loc>https://bazaar-et.vercel.app/product/Pyramid%20Kids%20Plastic%20Armchair</loc>
  </url> 
  <url>
    <loc>https://bazaar-et.vercel.app/product/Degeman%20plastic%20Armchair</loc>
@@ -110,7 +110,7 @@
  <url>
    <loc>https://bazaar-et.vercel.app/product/Vida%20Kids%20Plastic%20Chair</loc>
  </url> 
-    <url>
+ <url>
    <loc>https://bazaar-et.vercel.app/product/Circle%20Pedal%20ustbin</loc>
  </url> 
  <url>
@@ -119,7 +119,7 @@
  <url>
    <loc>https://bazaar-et.vercel.app/product/Tall%20zigzag%20plastic%20flower%20Pot</loc>
  </url> 
-    <url>
+ <url>
    <loc>https://bazaar-et.vercel.app/product/Medium%20Plastic%20Flower%20Pot</loc>
  </url> 
  <url>
@@ -128,7 +128,7 @@
  <url>
    <loc>https://bazaar-et.vercel.app/product/Six%20angle%20Flower%20Pot</loc>
  </url> 
-    <url>
+ <url>
    <loc>https://bazaar-et.vercel.app/product/Plastic%20Laundry%20Basket</loc>
  </url> 
  <url>
@@ -137,8 +137,8 @@
  <url>
    <loc>https://bazaar-et.vercel.app/product/Small%20foldable%20stool</loc>
  </url>     
-    <url>
-   <urlloc>https://bazaar-et.vercel.app/product/Cleaning%20bucket</loc>
+ <url>
+   <loc>https://bazaar-et.vercel.app/product/Cleaning%20bucket</loc>
  </url> 
  <url>
    <loc>https://bazaar-et.vercel.app/product/Box</loc>
@@ -146,7 +146,7 @@
  <url>
    <loc>https://bazaar-et.vercel.app/product/Vida%20foldable%20kids%20table</loc>
  </url> 
-    <url>
+ <url>
    <loc>https://bazaar-et.vercel.app/product/Chocho%20Container</loc>
  </url> 
  <url>
@@ -155,7 +155,7 @@
  <url>
    <loc>https://bazaar-et.vercel.app/product/Dish%20Drying%20Rack</loc>
  </url> 
-    <url>
+ <url>
    <loc>https://bazaar-et.vercel.app/product/Flower%20Pot</loc>
  </url> 
  <url>
@@ -164,7 +164,7 @@
  <url>
    <loc>https://bazaar-et.vercel.app/product/Excel%2030lit%20Trash%20Bin</loc>
  </url> 
-    <url>
+ <url>
    <loc>https://bazaar-et.vercel.app/product/plastic%20foldable%20stool</loc>
  </url> 
  <url>
@@ -173,8 +173,8 @@
  <url>
    <loc>https://bazaar-et.vercel.app/product/Aliver%20Foot%20Mask</loc>
  </url>    
-     <url>
-   <urlloc>https://bazaar-et.vercel.app/product/MIELLE%20GEL</loc>
+ <url>
+   <loc>https://bazaar-et.vercel.app/product/MIELLE%20GEL</loc>
  </url> 
  <url>
    <loc>https://bazaar-et.vercel.app/product/MIELLE%20Oil</loc>
@@ -182,7 +182,7 @@
  <url>
    <loc>https://bazaar-et.vercel.app/product/Pyramid%20Plastic%20Chair</loc>
  </url> 
-    <url>
+ <url>
    <loc>https://bazaar-et.vercel.app/product/Pyramid%20Plastic%20Armchair</loc>
  </url> 
  <url>
@@ -191,7 +191,7 @@
  <url>
    <loc>https://bazaar-et.vercel.app/product/Pedal%20Dustbin</loc>
  </url> 
-    <url>
+ <url>
    <loc>https://bazaar-et.vercel.app/product/Push%20Dustbin</loc>
  </url> 
  <url>
@@ -200,7 +200,7 @@
  <url>
    <loc>https://bazaar-et.vercel.app/product/Foldable%20kids%20Plastic%20Chair</loc>
  </url> 
-    <url>
+ <url>
    <loc>https://bazaar-et.vercel.app/product/Custom%20Indoor%20Planter</loc>
  </url> 
  <url>
@@ -209,8 +209,8 @@
  <url>
    <loc>https://bazaar-et.vercel.app/product/Vida%20Plastic%20Chair</loc>
  </url>     
-    <url>
-   <urlloc>https://bazaar-et.vercel.app/product/Pyramid%20Plastic%20Table</loc>
+ <url>
+   <loc>https://bazaar-et.vercel.app/product/Pyramid%20Plastic%20Table</loc>
  </url> 
  <url>
    <loc>https://bazaar-et.vercel.app/product/GARDEN%20UMBRELLA</loc>
@@ -218,7 +218,7 @@
  <url>
    <loc>https://bazaar-et.vercel.app/product/Sauvage%20byDior%20for%20Men</loc>
  </url> 
-    <url>
+ <url>
    <loc>https://bazaar-et.vercel.app/product/Polo%20Blue%20by%20Ralph%20Lauren%20for%20Men%20EDT</loc>
  </url> 
  <url>

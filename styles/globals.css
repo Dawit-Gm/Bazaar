@@ -59,24 +59,18 @@ textarea:focus {
       left: 0%;
       right: 0%;
      }
-   .grid {
-      top: -14px;
-      left: 0%;
-      right: 0%;
-      gap: 0.1rem;
-      position: relative;
-       } 
+   
    .card{
-     height: 245px;
+     height:270px;
      padding-bottom: -14%;
    } 
    
    .cardname {
      font-size: small;
     }
-   .price {
-     font-size: small;
-    }
+   {/*.price {
+     font-size: midium;
+    }*/}
     .contact {
      font-size: small;
     }
@@ -84,9 +78,26 @@ textarea:focus {
     .react-grid-layout {
        height: auto !important;
      }
+ @media (max-width: 480px) { /* Smaller breakpoint for even smaller screens */
+  .about {
+    margin-left: 40px; /* Even smaller margin for very small screens */
+    margin-right: 40px;
+  }
+  .services-content {
+    margin-left: 40px; /* Even smaller margin */
+    margin-right: 40px;
+  }
+}
 
  @media (max-width: 767px) {
-  
+  .services-content {
+    margin-left: 60px; /* Smaller margin on smaller screens */
+    margin-right: 60px;
+   }
+  .about {
+    margin-left: 60px; /* Smaller margin for smaller screens */
+    margin-right: 60px;
+  }
   input {
    width: 50vw;
    height: 38px;
@@ -95,6 +106,13 @@ textarea:focus {
     height: 36px;
     width: 36px;
    }
+  .grid {
+      top: -14px;
+      left: 0%;
+      right: 0%;
+      gap: 0.5rem;
+      position: relative;
+    } 
  
 }
 
@@ -107,6 +125,13 @@ textarea:focus {
     height: 43px;
     width: 43px;
    }
+ .grid {
+      top: -14px;
+      left: 0%;
+      right: 0%;
+      gap: 0.9rem;
+      position: relative;
+       } 
    
 }
   
@@ -204,39 +229,12 @@ a:hover {
   font-size: 0.8em; /* Reduced from 0.9em */
   color: #4a4a4a;
 }
-@media (max-width: 768px) { /* Adjust breakpoint as needed */
-  .about {
-    margin-left: 60px; /* Smaller margin for smaller screens */
-    margin-right: 60px;
-  }
-}
-
-@media (max-width: 480px) { /* Smaller breakpoint for even smaller screens */
-  .about {
-    margin-left: 40px; /* Even smaller margin for very small screens */
-    margin-right: 40px;
-  }
-}
 /* Base Styles */
 .services-content {
   margin-left: 80px;
   margin-right: 80px;
 }
 
-/* Responsive Styles for Smaller Screens */
-@media (max-width: 768px) { /* Adjust the breakpoint as needed */
-  .services-content {
-    margin-left: 60px; /* Smaller margin on smaller screens */
-    margin-right: 60px;
-  }
-}
-
-@media (max-width: 480px) { /* Even smaller screens */
-  .services-content {
-    margin-left: 40px; /* Even smaller margin */
-    margin-right: 40px;
-  }
-}
 .footer{
   display: flex; 
   height: 3rem;
