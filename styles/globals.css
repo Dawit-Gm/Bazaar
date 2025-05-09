@@ -54,23 +54,20 @@ textarea:focus {
     border-color : #66BF4C ;
 }
 
- .carousel {
-      top: -16px;
+ /*.carousel {
+      top: 0px;
       left: 0%;
       right: 0%;
-     }
+     }*/
    
    .card{
      height:270px;
-     padding-bottom: -14%;
    } 
    
    .cardname {
      font-size: small;
     }
-   {/*.price {
-     font-size: midium;
-    }*/}
+   
     .contact {
      font-size: small;
     }
@@ -107,7 +104,7 @@ textarea:focus {
     width: 36px;
    }
   .grid {
-      top: -14px;
+      top: 5px;
       left: 0%;
       right: 0%;
       gap: 0.5rem;
@@ -126,7 +123,7 @@ textarea:focus {
     width: 43px;
    }
  .grid {
-      top: -14px;
+      top: 5px;
       left: 0%;
       right: 0%;
       gap: 0.9rem;

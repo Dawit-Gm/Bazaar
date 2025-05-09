@@ -289,11 +289,11 @@ export default function Layout({children}) {
           </Link>
         </div>
     </header>
-  <main 
-    style={{ marginLeft:'0px', marginRight:'0px', marginTop:'16px', width: '100%' }}>{children}
+  <main className="main-container"
+    style={{ marginLeft:'15px', marginRight:'15px', marginTop:'16px', width: 'calc(100% - 30px)' }}>{children}
   </main>
  <footer className="footer flex h-10 mt-4 justify-center items-center shadow-inner">
-      <p>Copyright © 2024 Bazaar.com</p>
+      <p>Copyright © 2025 Bazaar</p>
   </footer>
       </div>
     </>

@@ -16,7 +16,7 @@ import { DefaultSeo } from 'next-seo';
 
 const prices = [
   {
-    name: 'ETB 1 to 50',
+    name: 'ETB 1 to 50', 
     value: '1-50',
   },
   {
