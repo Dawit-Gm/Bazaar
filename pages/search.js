@@ -113,9 +113,9 @@ export default function Search(props) {
        <DefaultSeo
           title={category ? `${category} in Ethiopia` : 'Plastic Products in Ethiopia'}
           description={`Explore top-quality ${category} at Ethiopia's leading online store. Shop affordable items for home and office. Enjoy doorstep delivery and hassle-free online shopping.`}
-          canonical={`https://bazaar-et.vercel.app/search?category=${category}`}
+          canonical={`https://bazaar.et/search?category=${category}`}
           openGraph={{
-            url: `https://bazaar-et.vercel.app/search?category=${category}`,
+            url: `https://bazaar.et/search?category=${category}`,
             title: category ? `${category} in Ethiopia` : 'Plastic Products in Ethiopia',
             description: `Explore top-quality ${category} at Ethiopia's leading online store. Shop affordable items for home and office. Enjoy doorstep delivery and hassle-free online shopping.`,
             site_name: 'Bazaar',
@@ -137,8 +137,8 @@ export default function Search(props) {
         itemScope
         itemType="http://schema.org/WebPage"
         itemProp="mainEntity"
-        itemID="https://bazaar-et.vercel.app/"
-        url={`https://bazaar-et.vercel.app/search?category=${category}`}
+        itemID="https://bazaar.et/"
+        url={`https://bazaar.et/search?category=${category}`}
       />
        <div className="grid md:grid-cols-4 md:gap-5">
         <div>

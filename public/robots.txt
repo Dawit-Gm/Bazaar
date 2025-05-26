@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://bazaar-et.vercel.app
+Host: https://bazaar.et
 
 # Sitemaps
-Sitemap: https://bazaar-et.vercel.app/sitemap.xml
+Sitemap: https://bazaar.et/sitemap.xml

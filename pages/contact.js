@@ -10,7 +10,7 @@ export default function ContactPage() {
      <p> Ethiopia, Addis Ababa A.A</p>
      <p> Phone & Email</p>
       <p>Phone: 0977757992</p>
-         Email: info@bazaar.com.et
+         Email: info@bazaar.et
       </div>
     </Layout>
   )

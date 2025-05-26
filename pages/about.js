@@ -4,7 +4,7 @@ export default function AboutPage() {
     <Layout>
       <div className="about text-left ml-40 mr-40">
       <b><h1 className="about text-center">  About Us </h1></b>
-<p>Welcome to Tsega plastic product online shop Bazaar.com, your one-stop shop for high-quality plastic products. 
+<p>Welcome to Tsega plastic product online shop Bazaar.et, your one-stop shop for high-quality plastic products. 
 We are a proud business located in the heart of Mercato, the largest open-air market in Africa.
 We are a leading supplier of high-quality plastic products in Ethiopia.
 Our mission is to provide you with the best plastic products at unbeatable prices.</p>

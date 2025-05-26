@@ -6,228 +6,232 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" 
         xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
-    <loc>https://bazaar-et.vercel.app</loc>
+    <loc>https://bazaar.et</loc>
     <lastmod>2024-02-23T17:09:30.674Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://bazaar-et.vercel.app/about</loc>
+    <loc>https://bazaar.et/about</loc>
     <lastmod>2024-02-23T17:09:30.674Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://bazaar-et.vercel.app/contact</loc>
+    <loc>https://bazaar.et/contact</loc>
     <lastmod>2024-02-23T17:09:30.674Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://bazaar-et.vercel.app/login</loc>
+    <loc>https://bazaar.et/login</loc>
     <lastmod>2024-02-23T17:09:30.674Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://bazaar-et.vercel.app/profile</loc>
+    <loc>https://bazaar.et/profile</loc>
     <lastmod>2024-02-23T17:09:30.674Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://bazaar-et.vercel.app/register</loc>
+    <loc>https://bazaar.et/register</loc>
     <lastmod>2024-02-23T17:09:30.674Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://bazaar-et.vercel.app/search</loc>
+    <loc>https://bazaar.et/search</loc>
     <lastmod>2024-02-23T17:09:30.674Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://bazaar-et.vercel.app/search?category=Baskets</loc>
+    <loc>https://bazaar.et/search?category=Baskets</loc>
   </url>
   <url>
-    <loc>https://bazaar-et.vercel.app/search?category=Boxes</loc>
+    <loc>https://bazaar.et/search?category=Boxes</loc>
   </url>
   <url>
-    <loc>https://bazaar-et.vercel.app/search?category=Buckets</loc>
+    <loc>https://bazaar.et/search?category=Buckets</loc>
   </url>
   <url>
-    <loc>https://bazaar-et.vercel.app/search?category=Chairs</loc>
+    <loc>https://bazaar.et/search?category=Chairs</loc>
   </url>
   <url>
-    <loc>https://bazaar-et.vercel.app/search?category=Chocho</loc>
+    <loc>https://bazaar.et/search?category=Chocho</loc>
   </url>
   <url>
-    <loc>https://bazaar-et.vercel.app/search?category=Dish+Drying+Racks</loc>
+    <loc>https://bazaar.et/search?category=Dish+Drying+Racks</loc>
   </url>
   <url>
-    <loc>https://bazaar-et.vercel.app/search?category=Dustbins</loc>
+    <loc>https://bazaar.et/search?category=Dustbins</loc>
   </url>
   <url>
-    <loc>https://bazaar-et.vercel.app/search?category=Flower+Pot</loc>
+    <loc>https://bazaar.et/search?category=Flower+Pot</loc>
   </url>
   <url>
-    <loc>https://bazaar-et.vercel.app/search?category=Foot+Mask</loc>
+    <loc>https://bazaar.et/search?category=Foot+Mask</loc>
   </url>
   <url>
-    <loc>https://bazaar-et.vercel.app/search?category=Hair+Gel</loc>
+    <loc>https://bazaar.et/search?category=Hair+Gel</loc>
   </url>
   <url>   
-    <loc>https://bazaar-et.vercel.app/search?category=Hair+Growth</loc>
+    <loc>https://bazaar.et/search?category=Hair+Growth</loc>
   </url> 
   <url>
-    <loc>https://bazaar-et.vercel.app/search?category=Hair+Oil</loc>
+    <loc>https://bazaar.et/search?category=Hair+Oil</loc>
   </url>
   <url>
-    <loc>https://bazaar-et.vercel.app/search?category=Perfume</loc>
+    <loc>https://bazaar.et/search?category=Perfume</loc>
   </url>
   <url>
-    <loc>https://bazaar-et.vercel.app/search?category=Shelfs</loc>
+    <loc>https://bazaar.et/search?category=Shelfs</loc>
   </url> 
   <url>
-    <loc>https://bazaar-et.vercel.app/search?category=Shoes</loc>
+    <loc>https://bazaar.et/search?category=Shoes</loc>
   </url>   
   <url>
-    <loc>https://bazaar-et.vercel.app/search?category=Tables</loc>
+    <loc>https://bazaar.et/search?category=Tables</loc>
   </url>
   <url>
-    <loc>https://bazaar-et.vercel.app/service</loc>
+    <loc>https://bazaar.et/service</loc>
     <lastmod>2024-02-23T17:09:30.674Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url> 
  <url>
-   <loc>https://bazaar-et.vercel.app/product/Pyramid%20Kids%20Plastic%20Armchair</loc>
+   <loc>https://bazaar.et/product/Pyramid%20Kids%20Plastic%20Armchair</loc>
  </url> 
  <url>
-   <loc>https://bazaar-et.vercel.app/product/Degeman%20plastic%20Armchair</loc>
+   <loc>https://bazaar.et/product/Degeman%20plastic%20Armchair</loc>
  </url>    
  <url>
-   <loc>https://bazaar-et.vercel.app/product/Vida%20Kids%20Plastic%20Chair</loc>
+   <loc>https://bazaar.et/product/Vida%20Kids%20Plastic%20Chair</loc>
  </url> 
  <url>
-   <loc>https://bazaar-et.vercel.app/product/Circle%20Pedal%20ustbin</loc>
+   <loc>https://bazaar.et/product/Circle%20Pedal%20ustbin</loc>
  </url> 
  <url>
-   <loc>https://bazaar-et.vercel.app/product/Vida%20Plastic%20Stool</loc>
+   <loc>https://bazaar.et/product/Vida%20Plastic%20Stool</loc>
  </url>    
  <url>
-   <loc>https://bazaar-et.vercel.app/product/Tall%20zigzag%20plastic%20flower%20Pot</loc>
+   <loc>https://bazaar.et/product/Tall%20zigzag%20plastic%20flower%20Pot</loc>
  </url> 
  <url>
-   <loc>https://bazaar-et.vercel.app/product/Medium%20Plastic%20Flower%20Pot</loc>
+   <loc>https://bazaar.et/product/Medium%20Plastic%20Flower%20Pot</loc>
  </url> 
  <url>
-   <loc>https://bazaar-et.vercel.app/product/Tall%20Flower%20Pot</loc>
+   <loc>https://bazaar.et/product/Tall%20Flower%20Pot</loc>
  </url>    
  <url>
-   <loc>https://bazaar-et.vercel.app/product/Six%20angle%20Flower%20Pot</loc>
+   <loc>https://bazaar.et/product/Six%20angle%20Flower%20Pot</loc>
  </url> 
  <url>
-   <loc>https://bazaar-et.vercel.app/product/Plastic%20Laundry%20Basket</loc>
+   <loc>https://bazaar.et/product/Plastic%20Laundry%20Basket</loc>
  </url> 
  <url>
-   <loc>https://bazaar-et.vercel.app/product/Plastic%2060%202lit%20box</loc>
+   <loc>https://bazaar.et/product/Plastic%2060%202lit%20box</loc>
  </url>    
  <url>
-   <loc>https://bazaar-et.vercel.app/product/Small%20foldable%20stool</loc>
+   <loc>https://bazaar.et/product/Small%20foldable%20stool</loc>
  </url>     
  <url>
-   <loc>https://bazaar-et.vercel.app/product/Cleaning%20bucket</loc>
+   <loc>https://bazaar.et/product/Cleaning%20bucket</loc>
  </url> 
  <url>
-   <loc>https://bazaar-et.vercel.app/product/Box</loc>
+   <loc>https://bazaar.et/product/Box</loc>
  </url>    
  <url>
-   <loc>https://bazaar-et.vercel.app/product/Vida%20foldable%20kids%20table</loc>
+   <loc>https://bazaar.et/product/Vida%20foldable%20kids%20table</loc>
  </url> 
  <url>
-   <loc>https://bazaar-et.vercel.app/product/Chocho%20Container</loc>
+   <loc>https://bazaar.et/product/Chocho%20Container</loc>
  </url> 
  <url>
-   <loc>https://bazaar-et.vercel.app/product/Shelf</loc>
+   <loc>https://bazaar.et/product/Shelf</loc>
  </url>    
  <url>
-   <loc>https://bazaar-et.vercel.app/product/Dish%20Drying%20Rack</loc>
+   <loc>https://bazaar.et/product/Dish%20Drying%20Rack</loc>
  </url> 
  <url>
-   <loc>https://bazaar-et.vercel.app/product/Flower%20Pot</loc>
+   <loc>https://bazaar.et/product/Flower%20Pot</loc>
  </url> 
  <url>
-   <loc>https://bazaar-et.vercel.app/product/Excel%2080x80%20Plastic%20Table</loc>
+   <loc>https://bazaar.et/product/Excel%2080x80%20Plastic%20Table</loc>
  </url>    
  <url>
-   <loc>https://bazaar-et.vercel.app/product/Excel%2030lit%20Trash%20Bin</loc>
+   <loc>https://bazaar.et/product/Excel%2030lit%20Trash%20Bin</loc>
  </url> 
  <url>
-   <loc>https://bazaar-et.vercel.app/product/plastic%20foldable%20stool</loc>
+   <loc>https://bazaar.et/product/plastic%20foldable%20stool</loc>
  </url> 
  <url>
-   <loc>https://bazaar-et.vercel.app/product/tall%20foldable%20chair</loc>
+   <loc>https://bazaar.et/product/tall%20foldable%20chair</loc>
  </url>    
  <url>
-   <loc>https://bazaar-et.vercel.app/product/Aliver%20Foot%20Mask</loc>
+   <loc>https://bazaar.et/product/Aliver%20Foot%20Mask</loc>
  </url>    
  <url>
-   <loc>https://bazaar-et.vercel.app/product/MIELLE%20GEL</loc>
+   <loc>https://bazaar.et/product/MIELLE%20GEL</loc>
  </url> 
  <url>
-   <loc>https://bazaar-et.vercel.app/product/MIELLE%20Oil</loc>
+   <loc>https://bazaar.et/product/MIELLE%20Oil</loc>
  </url>    
  <url>
-   <loc>https://bazaar-et.vercel.app/product/Pyramid%20Plastic%20Chair</loc>
+   <loc>https://bazaar.et/product/Pyramid%20Plastic%20Chair</loc>
  </url> 
  <url>
-   <loc>https://bazaar-et.vercel.app/product/Pyramid%20Plastic%20Armchair</loc>
+   <loc>https://bazaar.et/product/Pyramid%20Plastic%20Armchair</loc>
  </url> 
  <url>
-   <loc>https://bazaar-et.vercel.app/product/Lee%20Plastic%20Stool</loc>
+   <loc>https://bazaar.et/product/Lee%20Plastic%20Stool</loc>
  </url>    
  <url>
-   <loc>https://bazaar-et.vercel.app/product/Pedal%20Dustbin</loc>
+   <loc>https://bazaar.et/product/Pedal%20Dustbin</loc>
  </url> 
  <url>
-   <loc>https://bazaar-et.vercel.app/product/Push%20Dustbin</loc>
+   <loc>https://bazaar.et/product/Push%20Dustbin</loc>
  </url> 
  <url>
-   <loc>https://bazaar-et.vercel.app/product/Custom%20Plastic%20Flower%20Pot</loc>
+   <loc>https://bazaar.et/product/Custom%20Plastic%20Flower%20Pot</loc>
  </url>    
  <url>
-   <loc>https://bazaar-et.vercel.app/product/Foldable%20kids%20Plastic%20Chair</loc>
+   <loc>https://bazaar.et/product/Foldable%20kids%20Plastic%20Chair</loc>
  </url> 
  <url>
-   <loc>https://bazaar-et.vercel.app/product/Custom%20Indoor%20Planter</loc>
+   <loc>https://bazaar.et/product/Custom%20Indoor%20Planter</loc>
  </url> 
  <url>
-   <loc>https://bazaar-et.vercel.app/product/KIRKLAND%20MINOXIDIL%20For%20Hair%20Growth</loc>
+   <loc>https://bazaar.et/product/KIRKLAND%20MINOXIDIL%20For%20Hair%20Growth</loc>
  </url>    
  <url>
-   <loc>https://bazaar-et.vercel.app/product/Vida%20Plastic%20Chair</loc>
+   <loc>https://bazaar.et/product/Vida%20Plastic%20Chair</loc>
  </url>     
  <url>
-   <loc>https://bazaar-et.vercel.app/product/Pyramid%20Plastic%20Table</loc>
+   <loc>https://bazaar.et/product/Pyramid%20Plastic%20Table</loc>
  </url> 
  <url>
-   <loc>https://bazaar-et.vercel.app/product/GARDEN%20UMBRELLA</loc>
+   <loc>https://bazaar.et/product/GARDEN%20UMBRELLA</loc>
  </url>    
  <url>
-   <loc>https://bazaar-et.vercel.app/product/Sauvage%20byDior%20for%20Men</loc>
+   <loc>https://bazaar.et/product/Sauvage%20byDior%20for%20Men</loc>
  </url> 
  <url>
-   <loc>https://bazaar-et.vercel.app/product/Polo%20Blue%20by%20Ralph%20Lauren%20for%20Men%20EDT</loc>
+   <loc>https://bazaar.et/product/Polo%20Blue%20by%20Ralph%20Lauren%20for%20Men%20EDT</loc>
  </url> 
  <url>
-   <loc>https://bazaar-et.vercel.app/product/Rolling%20Trash%20Can</loc>
+   <loc>https://bazaar.et/product/Rolling%20Trash%20Can</loc>
  </url>    
  <url>
-   <loc>https://bazaar-et.vercel.app/product/Portable%20Telescopic%20Stool%20Collapsible%20Retractable%20Folding%20Chair</loc>
+   <loc>https://bazaar.et/product/Portable%20Telescopic%20Stool%20Collapsible%20Retractable%20Folding%20Chair</loc>
  </url> 
  <url>
-    <loc>https://bazaar-et.vercel.app/product/Foldable%20Clothes%20Storage%20Box%20Wardrobe%20Organizer</loc>
+    <loc>https://bazaar.et/product/Foldable%20Clothes%20Storage%20Box%20Wardrobe%20Organizer</loc>
  </url>
+ <url>
+    <loc>https://www.bazaar.et/product/Chai%20Seeds</loc>
+ </url>
+
 </urlset>
