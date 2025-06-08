@@ -6,7 +6,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" 
         xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
-    <loc>https://bazaar.et</loc>
+    <loc>https://www.bazaar.et/</loc>
     <lastmod>2024-02-23T17:09:30.674Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>

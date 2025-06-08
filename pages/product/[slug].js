@@ -52,9 +52,9 @@ export default function ProductScreen(props) {
       <DefaultSeo
         title={product ? `${product.name} in Ethiopia`: 'Plastic Products in Ethiopia'}
         description={product.description}
-        canonical={`https://bazaar-et.vercel.app/products/${product.slug}`}
+        canonical={`https://bazaar.et/products/${product.slug}`}
         openGraph={{
-           url: `https://bazaar-et.vercel.app/products/${product.slug}`,
+           url: `https://bazaar.et/products/${product.slug}`,
            title: product ? `${product.name} in Ethiopia` : 'Plastic Products in Ethiopia',
            description: product.description,
            site_name: 'Bazaar',
@@ -74,8 +74,8 @@ export default function ProductScreen(props) {
               itemScope
               itemType="http://schema.org/WebPage"
               itemProp="mainEntity"
-              itemID="https://bazaar-et.vercel.app/"
-              url={`https://bazaar-et.vercel.app/products/${product.slug}`}
+              itemID="https://bazaar.et/"
+              url={`https://bazaar.et/products/${product.slug}`}
           />
       <div className="mt-0 mb-3">
         <Link href="/">Back to Products</Link>
