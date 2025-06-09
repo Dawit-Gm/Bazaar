@@ -74,7 +74,7 @@ export default function Home({ products, categories }) {
         additionalLinkTags={[
           {
             rel: 'icon',
-            href: '/favicon.ico',
+            href: 'public/favicon.ico',
           },
         ]}
         additionalMetaTags={[
