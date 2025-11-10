@@ -293,7 +293,7 @@ export default function Layout({children}) {
     style={{ marginLeft:'15px', marginRight:'15px', marginTop:'16px', width: 'calc(100% - 30px)' }}>{children}
   </main>
  <footer className="footer flex h-10 mt-4 justify-center items-center shadow-inner">
-      <p>Copyright © 2025 Bazaar</p>
+      <p>Copyright © 2026 Bazaar</p>
   </footer>
       </div>
     </>
