@@ -1,5 +1,5 @@
 import { signOut, useSession } from 'next-auth/react';
-//import Head from 'next/head';
+import TawkTo from './TawkTo';
 import Link from 'next/link';
 import Cookies from 'js-cookie';
 import React, { useContext, useEffect, useState, useRef} from 'react';
@@ -31,6 +31,7 @@ export default function Layout({children}) {
   const [query, setQuery] = useState('');
 
   const router = useRouter();
+  const isAdminRoute = router.pathname.startsWith('/admin');
   const submitHandler = (e) => {
     e.preventDefault();
     router.push(`/search?query=${query}`);
@@ -296,6 +297,7 @@ export default function Layout({children}) {
       <p>Copyright © 2026 Bazaar</p>
   </footer>
       </div>
+      {!isAdminRoute && <TawkTo />}
     </>
   );
 }
