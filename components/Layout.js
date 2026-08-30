@@ -297,7 +297,8 @@ export default function Layout({children}) {
       <p>Copyright © 2026 Bazaar</p>
   </footer>
       </div>
+        {/* Only show chat widget on customer-facing pages */}
       {!isAdminRoute && <TawkTo />}
-    </>
+      </>
   );
 }
