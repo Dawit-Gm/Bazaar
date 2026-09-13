@@ -15,10 +15,17 @@ import { BsPhoneVibrate } from 'react-icons/bs';
 import { JsonLd } from 'react-schemaorg';
 import { DefaultSeo } from 'next-seo';
 
-
+// Helper function to split name into English and Amharic parts
+const splitBilingualName = (name) => {
+  const englishPart = name.match(/[\p{Script=Latin}\d\s!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]/gu)?.join('')?.trim() || '';
+  const amharicPart = name.match(/[\p{Script=Ethiopic}\d\s!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]/gu)?.join('')?.trim() || '';
+  return { englishPart, amharicPart };
+};
 
 export default function ProductScreen(props) {
   const { product } = props;
+
+  const { englishPart, amharicPart } = splitBilingualName(product.name);
 
   let mainImage = product.image[0];  
   let images = product.image.filter(img => img !== mainImage);
@@ -47,6 +54,7 @@ export default function ProductScreen(props) {
     };
 
        
+
   return (
     <Layout title={product.name}>
       <DefaultSeo
@@ -112,8 +120,13 @@ export default function ProductScreen(props) {
         <div style={{ marginTop:'5px', marginLeft:'0px'}}>
           <ul>
             <li>
-              <h1 className="text-lg">{product.name}</h1>
-            </li>
+              {englishPart && (
+              <h1 className="text-lg" style={{ margin: 0 }}>{englishPart}</h1>
+               )}
+              {amharicPart && (
+                <p style={{ margin: '0 0 0 0', fontSize: '1.125rem', color: '#374151' }}>{amharicPart}</p>
+               )}
+           </li>
             <div>Price:&nbsp;&nbsp;ETB&nbsp;{product.price}</div>
             <li>Category: {product.category}</li>         
             <li>Brand: {product.brand}</li>  
