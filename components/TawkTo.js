@@ -1,34 +1,51 @@
-import { useEffect } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useSession } from 'next-auth/react';
+import { useRouter } from 'next/router';
+import LoginModal from './LoginModal';
 
 const TawkTo = () => {
-  const { data: session } = useSession();
+  const { data: session, status } = useSession();
+  const router = useRouter();
+  const [showLogin, setShowLogin] = useState(false);
 
+  const statusRef = useRef(status);
+  statusRef.current = status;
+
+  // Inject tawk.to once
   useEffect(() => {
-    // Only run in browser, skip during server-side rendering
     if (typeof window === 'undefined') return;
-
-    // Prevent double-loading if script already exists
     if (document.getElementById('tawk-to-script')) return;
 
     const propertyId = process.env.NEXT_PUBLIC_TAWKTO_PROPERTY_ID;
     const widgetId = process.env.NEXT_PUBLIC_TAWKTO_WIDGET_ID;
 
     if (!propertyId || !widgetId) {
-      console.warn('TawkTo: Missing Property ID or Widget ID in environment variables');
+      console.warn('TawkTo: Missing env vars');
       return;
     }
 
     window.Tawk_API = window.Tawk_API || {};
     window.Tawk_LoadStart = new Date();
 
-    // If user is logged in, pre-fill their info in the chat
-    if (session?.user) {
-      window.Tawk_API.visitor = {
-        name: session.user.name || 'Bazaar Customer',
-        email: session.user.email || '',
-      };
-    }
+    // Pre-fill visitor info when widget loads
+    window.Tawk_API.onLoad = function () {
+      if (session?.user && window.Tawk_API.setAttributes) {
+        window.Tawk_API.setAttributes({
+          name: session.user.name || 'Bazaar Customer',
+          email: session.user.email || '',
+        });
+      }
+    };
+
+    // Guest clicks chat bubble → minimize and show login modal
+    window.Tawk_API.onChatMaximized = function () {
+      if (statusRef.current !== 'authenticated') {
+        if (window.Tawk_API.minimize) {
+          window.Tawk_API.minimize();
+        }
+        setShowLogin(true);
+      }
+    };
 
     const script = document.createElement('script');
     script.id = 'tawk-to-script';
@@ -44,9 +61,25 @@ const TawkTo = () => {
       const existing = document.getElementById('tawk-to-script');
       if (existing) existing.remove();
     };
-  }, [session]); // Re-run if login/logout happens
+  }, []); // Load once
 
-  return null;
+  // Update tawk.to visitor info when user logs in after script is loaded
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    if (status !== 'authenticated') return;
+    if (!window.Tawk_API?.setAttributes) return;
+
+    window.Tawk_API.setAttributes({
+      name: session.user.name || 'Bazaar Customer',
+      email: session.user.email || '',
+    });
+  }, [status, session]);
+
+  return (
+    <>
+      <LoginModal isOpen={showLogin} onClose={() => setShowLogin(false)} />
+    </>
+  );
 };
 
 export default TawkTo;
