@@ -1,25 +1,25 @@
 import bcryptjs from 'bcryptjs';
+import crypto from 'crypto';
 import NextAuth from 'next-auth';
 import CredentialsProvider from 'next-auth/providers/credentials';
-import User from '../../../models/User';
-import db from '../../../utils/db';
-
-
 import GoogleProvider from 'next-auth/providers/google';
 import FacebookProvider from 'next-auth/providers/facebook';
-import crypto from 'crypto';
-
+import User from '../../../models/User';
+import db from '../../../utils/db';
 
 export default NextAuth({
   session: {
     strategy: 'jwt',
   },
   callbacks: {
-    async jwt({ token, user, account, profile}) {
-        // Social login: create or find user in database
-      if (account && (account.provider === 'google' || account.provider === 'facebook')) {
+    async jwt({ token, user, account, profile }) {
+      // Social login: create or find user in database
+      if (
+        account &&
+        (account.provider === 'google' || account.provider === 'facebook')
+      ) {
         await db.connect();
-        
+
         let dbUser = await User.findOne({ email: profile.email });
 
         if (!dbUser) {
@@ -37,18 +37,27 @@ export default NextAuth({
         token.isAdmin = dbUser.isAdmin;
         token.name = dbUser.name;
         token.email = dbUser.email;
-        
+        token.picture = profile.picture || profile.image || null; // save picture URL
+        token.provider = account.provider;
+
         await db.disconnect();
       }
 
       // For credentials login, user is passed from authorize()
-            if (user?._id) token._id = user._id;
+      if (user?._id) token._id = user._id;
       if (user?.isAdmin) token.isAdmin = user.isAdmin;
+      if (user?.name) token.name = user.name;
+      if (user?.email) token.email = user.email;
+
       return token;
     },
     async session({ session, token }) {
       if (token?._id) session.user._id = token._id;
       if (token?.isAdmin) session.user.isAdmin = token.isAdmin;
+      if (token?.name) session.user.name = token.name;
+      if (token?.email) session.user.email = token.email;
+      if (token?.picture) session.user.picture = token.picture;
+      if (token?.provider) session.user.provider = token.provider;
       return session;
     },
   },
