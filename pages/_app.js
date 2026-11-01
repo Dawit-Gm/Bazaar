@@ -6,7 +6,6 @@ import Script from 'next/script';
 import TawkTo from '../components/TawkTo';
 import RememberSocialUser from '../components/RememberSocialUser';
 
-
 function MyApp({ Component, pageProps: { session, ...pageProps } }) {
   return (
     <>
@@ -19,7 +18,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
         <meta name="theme-color" content="#16a34a" />
       </Head>
 
-      {/* Google Identity Services for account detection */}
+      {/* Google Identity Services for One Tap */}
       <Script
         src="https://accounts.google.com/gsi/client"
         strategy="afterInteractive"
@@ -33,7 +32,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
         </StoreProvider>
       </SessionProvider>
     </>
-     );
+  );
 }
 
 export default MyApp;

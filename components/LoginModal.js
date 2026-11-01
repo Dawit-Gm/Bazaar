@@ -7,8 +7,7 @@ import Link from 'next/link';
 export default function LoginModal({ isOpen, onClose }) {
   const [loading, setLoading] = useState(false);
   const [showEmailForm, setShowEmailForm] = useState(false);
-  const [facebookUser, setFacebookUser] = useState(null);
-  const [lastGoogleUser, setLastGoogleUser] = useState(null);
+  const [lastUser, setLastUser] = useState(null);
 
   const {
     handleSubmit,
@@ -16,88 +15,38 @@ export default function LoginModal({ isOpen, onClose }) {
     formState: { errors },
   } = useForm();
 
-  // Load last-used Google account from localStorage
+  // Load last-used account from localStorage when modal opens
   useEffect(() => {
     if (!isOpen) return;
     try {
-      const saved = localStorage.getItem('bazaar_last_google_user');
-      if (saved) setLastGoogleUser(JSON.parse(saved));
+      const saved = localStorage.getItem('bazaar_last_user');
+      if (saved) setLastUser(JSON.parse(saved));
     } catch (e) {
       // ignore
     }
   }, [isOpen]);
 
-  // Initialize Google One Tap + Facebook detection when modal opens
+  // Initialize Google One Tap when modal opens (shows native account picker at top-right)
   useEffect(() => {
     if (!isOpen || typeof window === 'undefined') return;
 
-    // ── Google Identity Services: One Tap ──
     const initGoogle = () => {
       if (!window.google?.accounts?.id) return;
-      
+
       window.google.accounts.id.initialize({
         client_id: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID || '',
-        callback: (response) => {
-          // GIS returned a JWT credential — for now, fall back to standard OAuth
-          // because NextAuth v4 GoogleProvider uses OAuth, not GIS JWT
+        callback: () => {
           signIn('google', { callbackUrl: window.location.href });
         },
         auto_select: false,
         cancel_on_tap_outside: false,
       });
 
-      // Prompt One Tap — this shows the native "Sign in as [Name]" card at top-right
-      window.google.accounts.id.prompt((notification) => {
-        // notification tells us if it displayed or not
-        // we don't need to handle it — the UI appears automatically
-      });
+      // This shows Google's native "Sign in as [Name]" card at top-right corner
+      window.google.accounts.id.prompt();
     };
 
-    // ── Facebook SDK: detect logged-in user ──
-    const initFacebook = () => {
-      if (window.FB) {
-        FB.getLoginStatus((response) => {
-          if (response.status === 'connected') {
-            FB.api('/me', { fields: 'name,picture' }, (userInfo) => {
-              if (userInfo && !userInfo.error) {
-                setFacebookUser(userInfo);
-              }
-            });
-          }
-        });
-      } else if (!document.getElementById('fb-sdk-script')) {
-        window.fbAsyncInit = function () {
-          FB.init({
-            appId: process.env.NEXT_PUBLIC_FACEBOOK_CLIENT_ID || '',
-            cookie: true,
-            xfbml: true,
-            version: 'v18.0',
-          });
-          FB.getLoginStatus((response) => {
-            if (response.status === 'connected') {
-              FB.api('/me', { fields: 'name,picture' }, (userInfo) => {
-                if (userInfo && !userInfo.error) setFacebookUser(userInfo);
-              });
-            }
-          });
-        };
-
-        const script = document.createElement('script');
-        script.id = 'fb-sdk-script';
-        script.src = 'https://connect.facebook.net/en_US/sdk.js';
-        script.async = true;
-        script.defer = true;
-        script.crossOrigin = 'anonymous';
-        document.body.appendChild(script);
-      }
-    };
-
-    // Small delay so GIS script (loaded in _app.js) is ready
-    const timer = setTimeout(() => {
-      initGoogle();
-      initFacebook();
-    }, 300);
-
+    const timer = setTimeout(initGoogle, 500);
     return () => clearTimeout(timer);
   }, [isOpen]);
 
@@ -126,10 +75,8 @@ export default function LoginModal({ isOpen, onClose }) {
     }
   };
 
-  const handleGoogleSignIn = () => {
-    // Remember that user chose Google (we'll store name after successful login)
-    signIn('google', { callbackUrl: window.location.href });
-  };
+  // Display name or email (whichever is available)
+  const displayName = lastUser?.name || lastUser?.email || 'User';
 
   return (
     <div
@@ -155,78 +102,59 @@ export default function LoginModal({ isOpen, onClose }) {
           Choose an account to chat with us
         </p>
 
-        {/* ── Google: "Sign in as [Name]" card if remembered, else standard ── */}
-        {lastGoogleUser ? (
+        {/* ── Remembered Account (Google or Facebook) ── */}
+        {lastUser && (
           <button
-            onClick={handleGoogleSignIn}
-            className="w-full flex items-center gap-3 bg-white border border-gray-200 hover:border-green-400 hover:shadow-md text-gray-800 py-3 px-4 rounded-xl transition mb-3"
+            onClick={() => signIn('google', { callbackUrl: window.location.href })}
+            className="w-full flex items-center gap-3 bg-white border-2 border-green-200 hover:border-green-500 hover:bg-green-50 text-gray-800 py-3 px-4 rounded-xl transition shadow-sm mb-3"
           >
-            <img
-              src={lastGoogleUser.picture || 'https://via.placeholder.com/40'}
-              alt={lastGoogleUser.name}
-              className="w-10 h-10 rounded-full"
-            />
-            <div className="text-left">
-              <div className="font-semibold text-sm">Sign in as {lastGoogleUser.name}</div>
-              <div className="text-xs text-gray-400">{lastGoogleUser.email}</div>
-            </div>
-            <span className="ml-auto text-gray-300">→</span>
-          </button>
-        ) : (
-          <button
-            onClick={handleGoogleSignIn}
-            className="w-full flex items-center gap-3 bg-white border-2 border-gray-100 hover:border-green-400 hover:bg-green-50 text-gray-800 py-3 px-4 rounded-xl transition shadow-sm mb-3"
-          >
-            <div className="w-10 h-10 bg-white rounded-full border border-gray-100 flex items-center justify-center shadow-sm">
-              <svg className="w-5 h-5" viewBox="0 0 24 24">
-                <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/>
-                <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
-                <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
-                <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
-              </svg>
+            <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center text-green-700 font-bold text-lg">
+              {displayName.charAt(0).toUpperCase()}
             </div>
             <div className="text-left">
-              <div className="font-semibold text-sm">Sign in with Google</div>
-              <div className="text-xs text-gray-400">Use your Google account</div>
+              <div className="font-semibold text-sm">Sign in as {displayName}</div>
+              <div className="text-xs text-gray-400">{lastUser.email || 'Google account'}</div>
             </div>
-            <span className="ml-auto text-gray-300">→</span>
+            <span className="ml-auto text-green-500 font-bold">→</span>
           </button>
         )}
 
-        {/* ── Facebook: "Continue as [Name]" if detected ── */}
-        {facebookUser ? (
-          <button
-            onClick={() => signIn('facebook', { callbackUrl: window.location.href })}
-            className="w-full flex items-center gap-3 bg-[#1877F2] hover:bg-[#166fe5] text-white py-3 px-4 rounded-xl transition shadow-sm mb-4"
-          >
-            <img
-              src={facebookUser.picture?.data?.url || 'https://via.placeholder.com/40'}
-              alt={facebookUser.name}
-              className="w-10 h-10 rounded-full border-2 border-white/30"
-            />
-            <div className="text-left">
-              <div className="font-semibold text-sm">Continue as {facebookUser.name}</div>
-              <div className="text-xs text-blue-100">Facebook</div>
+        {/* ── Google ── */}
+        <button
+          onClick={() => signIn('google', { callbackUrl: window.location.href })}
+          className="w-full flex items-center gap-3 bg-white border border-gray-200 hover:border-gray-400 text-gray-800 py-3 px-4 rounded-xl transition shadow-sm mb-3"
+        >
+          <div className="w-10 h-10 bg-white rounded-full border border-gray-100 flex items-center justify-center shadow-sm">
+            <svg className="w-5 h-5" viewBox="0 0 24 24">
+              <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/>
+              <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+              <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+              <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+            </svg>
+          </div>
+          <div className="text-left">
+            <div className="font-semibold text-sm">
+              {lastUser ? 'Use another Google account' : 'Sign in with Google'}
             </div>
-            <span className="ml-auto text-blue-200">→</span>
-          </button>
-        ) : (
-          <button
-            onClick={() => signIn('facebook', { callbackUrl: window.location.href })}
-            className="w-full flex items-center gap-3 bg-[#1877F2] hover:bg-[#166fe5] text-white py-3 px-4 rounded-xl transition shadow-sm mb-4"
-          >
-            <div className="w-10 h-10 bg-[#166fe5] rounded-full flex items-center justify-center">
-              <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-              </svg>
-            </div>
-            <div className="text-left">
-              <div className="font-semibold text-sm">Sign in with Facebook</div>
-              <div className="text-xs text-blue-100">Use your Facebook account</div>
-            </div>
-            <span className="ml-auto text-blue-200">→</span>
-          </button>
-        )}
+            <div className="text-xs text-gray-400">google.com</div>
+          </div>
+        </button>
+
+        {/* ── Facebook ── */}
+        <button
+          onClick={() => signIn('facebook', { callbackUrl: window.location.href })}
+          className="w-full flex items-center gap-3 bg-[#1877F2] hover:bg-[#166fe5] text-white py-3 px-4 rounded-xl transition shadow-sm mb-4"
+        >
+          <div className="w-10 h-10 bg-[#166fe5] rounded-full flex items-center justify-center">
+            <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+          </div>
+          <div className="text-left">
+            <div className="font-semibold text-sm">Sign in with Facebook</div>
+            <div className="text-xs text-blue-100">facebook.com</div>
+          </div>
+        </button>
 
         {/* Toggle email form */}
         {!showEmailForm ? (
